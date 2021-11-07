@@ -1,6 +1,7 @@
 vim.cmd([[
 filetype plugin indent on
 syntax enable
+colorscheme onedark
 set nocompatible
 set noswapfile
 set autoread
@@ -43,3 +44,5 @@ set splitbelow
 set splitright
 set clipboard=unnamedplus
 ]])
+
+vim.g.mapleader = ' '
