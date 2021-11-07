@@ -24,14 +24,12 @@ set showcmd
 set list
 set list lcs=trail:·,space:·,tab:»·,eol:¬
 set noshowmode
-set laststatus=2
 set backspace=2
 set wildignore+=*/tmp/*,*/vendor/*,*/node_modules/*,*/.git/*,*/log/*,*.so,*.swp,*.zip
 set wildmenu
 set ignorecase
 set smartcase
 set hlsearch
-" set ncsearch
 set sc
 set hidden
 set nobackup

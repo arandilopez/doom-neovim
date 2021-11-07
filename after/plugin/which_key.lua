@@ -5,6 +5,11 @@ wk.register({
   ["<leader>"] = {
     ["<space>"] = { "<cmd>Telescope find_files<cr>", "Find Files" },
 
+    f = {
+      name = "+Find",
+      f = { "<cmd>Telescope find_files<cr>", "Find Files" }
+    },
+
     b = {
       name = "+Buffers",
       b = { "<cmd>Telescope buffers<cr>", "Browse buffers" },
@@ -17,7 +22,8 @@ wk.register({
 
     g = {
       name = "+Git",
-      g = { "<cmd>Gtabedit :<cr>", "Open Git manager" }
+      g = { "<cmd>Gtabedit :<cr>", "Open Git manager" },
+      B = { "<cmd>Git blame<cr>", "Open git blame" },
     }
   },
 }, nops)

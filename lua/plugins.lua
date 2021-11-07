@@ -9,6 +9,7 @@ return require('packer').startup(function()
   use 'tpope/vim-commentary'
   use 'tpope/vim-endwise'
   use 'andymass/vim-matchup'
+  use 'glepnir/dashboard-nvim'
   use {
     'nvim-lualine/lualine.nvim',
     requires = {'kyazdani42/nvim-web-devicons', opt = true}
