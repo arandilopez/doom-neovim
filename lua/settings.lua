@@ -1,46 +1,45 @@
+local set = vim.opt
+local global = vim.g
+global.mapleader = ' '
+
 vim.cmd([[
 filetype plugin indent on
 syntax enable
 colorscheme onedark
-set nocompatible
-set noswapfile
-set autoread
-set encoding=utf8
-set vb t_vb="
-set noerrorbells
-set visualbell
-set timeout timeoutlen=500
-set number relativenumber
-set wrap
-set tabstop=2
-set shiftwidth=2
-set shiftround
-set smarttab
-set expandtab
-set cursorline
-set showmatch
-set mousehide
-set showcmd
-set list
-set list lcs=trail:·,space:·,tab:»·,eol:¬
-set noshowmode
-set backspace=2
-set wildignore+=*/tmp/*,*/vendor/*,*/node_modules/*,*/.git/*,*/log/*,*.so,*.swp,*.zip
-set wildmenu
-set ignorecase
-set smartcase
-set hlsearch
-set sc
-set hidden
-set nobackup
-set nowritebackup
-set cmdheight=2
-set updatetime=300
-set shortmess+=c
-set conceallevel=0
-set splitbelow
-set splitright
-set clipboard=unnamedplus
 ]])
 
-vim.g.mapleader = ' '
+set.compatible = false
+set.swapfile = false
+set.autoread = true
+set.encoding='utf8'
+set.timeout= true
+set.timeoutlen = 300
+set.number = true
+set.relativenumber = true
+set.tabstop = 2
+set.shiftwidth = 2
+set.shiftround = true
+set.smarttab = true
+set.expandtab = true
+set.cursorline = true
+set.showmatch = true
+set.list = true
+set.listchars = {trail = '·', space = '·', tab = '»·', eol = '¬'}
+set.showmode = false
+set.backspace = '2'
+set.wildignore = set.wildignore + {'*/tmp/*', '*/vendor/*', '*/node_modules/*', '*/.git/*', '*/log/*', '*.so', '*.swp', '*.zip'}
+set.wildmenu = true
+set.ignorecase = true
+set.smartcase = true
+set.hlsearch = true
+set.sc = true
+set.hidden = true
+set.backup  = false
+set.writebackup = false
+set.cmdheight = 2
+set.updatetime = 300
+set.shortmess:append('c')
+set.conceallevel = 0
+set.splitbelow = true
+set.splitright = true
+set.clipboard = 'unnamedplus'
