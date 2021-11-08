@@ -4,6 +4,7 @@ local nops = {mode = 'n', silent = true, noremap = true}
 wk.register({
   ["<leader>"] = {
     ["<space>"] = { "<cmd>Telescope find_files<cr>", "Find Files" },
+    ["/"] = { "<cmd>Telescope live_grep<cr>", "Search in project" },
 
     b = {
       name = "+Buffers",
