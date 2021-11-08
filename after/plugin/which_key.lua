@@ -29,6 +29,11 @@ wk.register({
       B = { "<cmd>Git blame<cr>", "Open git blame" },
     },
 
+    o = {
+      name = "+Open",
+      p = {"<cmd>NvimTreeToggle<cr>", "Open folder tree view"}
+    },
+
     s = {
       name = "+Search",
       p = { "<cmd>Telescope live_grep<cr>", "Search in project" }
