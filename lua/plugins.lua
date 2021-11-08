@@ -20,7 +20,9 @@ return require('packer').startup(function()
   -- LSP
   use 'neovim/nvim-lspconfig'
   use 'kabouzeid/nvim-lspinstall'
-  use 'glepnir/lspsaga.nvim'
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-nvim-lsp'
+  -- use 'glepnir/lspsaga.nvim'
 
   -- VCS plugins
   use 'tpope/vim-fugitive'
