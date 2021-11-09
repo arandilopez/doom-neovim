@@ -3,8 +3,10 @@ local global = vim.g
 global.mapleader = ' '
 
 vim.cmd([[
+autocmd!
 filetype plugin indent on
 syntax enable
+set termguicolors
 colorscheme onedark
 ]])
 
@@ -12,6 +14,9 @@ set.compatible = false
 set.swapfile = false
 set.autoread = true
 set.encoding='utf8'
+set.fileencodings='utf8'
+set.title = true
+set.autoindent = true
 set.timeout= true
 set.timeoutlen = 300
 set.number = true
@@ -36,10 +41,14 @@ set.sc = true
 set.hidden = true
 set.backup  = false
 set.writebackup = false
-set.cmdheight = 2
+set.cmdheight = 1
+set.laststatus = 2
+set.scrolloff = 10
 set.updatetime = 300
 set.shortmess:append('c')
 set.conceallevel = 0
 set.splitbelow = true
 set.splitright = true
 set.clipboard = 'unnamedplus'
+set.shell = 'zsh'
+set.exrc = true
