@@ -5,6 +5,7 @@ wk.register({
   ["<leader>"] = {
     ["<space>"] = { "<cmd>Telescope find_files<cr>", "Find Files" },
     ["/"] = { "<cmd>Telescope live_grep<cr>", "Search in project" },
+    [","] = { "<cmd>Telescope buffers<cr>", "Browse buffers" },
 
     b = {
       name = "+Buffers",
