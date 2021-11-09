@@ -1,5 +1,7 @@
 # DOOM Neovim
 
+![](assets/demo.png)
+
 Not really, just kiddin'. 
 
 I really love [DOOM Emacs](https://github.com/hlissner/doom-emacs) and I encourage you to try it. It's the best text editor I tried so far.
