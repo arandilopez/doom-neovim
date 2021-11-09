@@ -31,4 +31,11 @@ let g:dashboard_custom_shortcut={
 \ 'find_word'          : 'SPC s p',
 \ 'book_marks'         : 'SPC f b',
 \ }
+
+let g:dashboard_session_directory = $HOME..'/.config/nvim/.sessions'
+let packages = len(globpath('~/.local/share/nvim/site/pack/packer/start', '*', 0, 1))
 ]])
+
+vim.api.nvim_exec([[
+let g:dashboard_custom_footer = ['Doom loaded '..packages..' packages']
+]], false)
