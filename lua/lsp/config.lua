@@ -38,6 +38,6 @@ local protocol = require'vim.lsp.protocol'
 local capabilities = require('cmp_nvim_lsp').update_capabilities(protocol.make_client_capabilities())
 
 return {
-  on_attach = on_attach
+  on_attach = on_attach,
   capabilities = capabilities
 }

@@ -1,2 +1,3 @@
-require('typescript')
-require('ruby')
+require('lsp.typescript')
+require('lsp.ruby')
+

@@ -1,4 +1,4 @@
-local config = require('config')
+local config = require('lsp.config')
 
 require('lspconfig').tsserver.setup {
   on_attach = config.on_attach,
