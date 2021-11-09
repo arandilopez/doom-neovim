@@ -18,7 +18,7 @@ I created these settings to work as I do with DOOM Emacs... as far as possible..
 2. Clone the repo
 
 ```sh
-git clone https://github.com/arandilopez/nvim ~/.config/nvim
+git clone https://github.com/arandilopez/doom-neovim ~/.config/nvim
 ```
 
 3. Clone [Packer](https://github.com/wbthomason/packer.nvim#quickstart)
