@@ -20,23 +20,37 @@ return require('packer').startup(function()
     requires = 'kyazdani42/nvim-web-devicons',
     config = function() require'nvim-tree'.setup {} end
   }
+  use {
+    'windwp/nvim-autopairs',
+    config = function() require('nvim-autopairs').setup{} end
+  }
+
   -- Mappings
   use "folke/which-key.nvim"
 
   -- LSP
   use 'neovim/nvim-lspconfig'
   use 'kabouzeid/nvim-lspinstall'
-  use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-vsnip'
+  use 'hrsh7th/vim-vsnip'
   -- use 'glepnir/lspsaga.nvim'
 
   -- VCS plugins
   use 'tpope/vim-fugitive'
+  use 'tpope/vim-rhubarb'
   use { 'lewis6991/gitsigns.nvim', -- git added/removed in sidebar + inline blame
     requires = { 'nvim-lua/plenary.nvim' },
   }
 
   -- Colorscheme
   use 'navarasu/onedark.nvim'
+
+  -- Extras
+  use 'wakatime/vim-wakatime'
 end)
 
