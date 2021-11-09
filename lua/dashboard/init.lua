@@ -1,3 +1,4 @@
+vim.cmd([[
 let g:dashboard_custom_header =<< trim END
 =================     ===============     ===============   ========  ========
 \\ . . . . . . .\\   //. . . . . . .\\   //. . . . . . .\\  \\. . .\\// . . //
@@ -30,3 +31,4 @@ let g:dashboard_custom_shortcut={
 \ 'find_word'          : 'SPC s p',
 \ 'book_marks'         : 'SPC f b',
 \ }
+]])

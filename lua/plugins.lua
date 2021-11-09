@@ -4,26 +4,28 @@ return require('packer').startup(function()
   -- Core functionality
   use 'wbthomason/packer.nvim'
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  use { 'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}} }
+  use { 
+    'nvim-telescope/telescope.nvim', 
+    requires = {
+      {'nvim-lua/popup.nvim'}, 
+      {'nvim-lua/plenary.nvim'}
+    } 
+  }
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = {'kyazdani42/nvim-web-devicons', opt = true}
+  }
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = 'kyazdani42/nvim-web-devicons',
+  }
   use 'tpope/vim-surround'
   use 'tpope/vim-commentary'
   use 'tpope/vim-endwise'
   use 'andymass/vim-matchup'
   use 'glepnir/dashboard-nvim'
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = {'kyazdani42/nvim-web-devicons', opt = true}
-  }
+  use 'windwp/nvim-autopairs'
   use 'moll/vim-bbye'
-  use {
-    'kyazdani42/nvim-tree.lua',
-    requires = 'kyazdani42/nvim-web-devicons',
-    config = function() require'nvim-tree'.setup {} end
-  }
-  use {
-    'windwp/nvim-autopairs',
-    config = function() require('nvim-autopairs').setup{} end
-  }
 
   -- Mappings
   use "folke/which-key.nvim"
@@ -38,12 +40,11 @@ return require('packer').startup(function()
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-vsnip'
   use 'hrsh7th/vim-vsnip'
-  -- use 'glepnir/lspsaga.nvim'
 
   -- VCS plugins
   use 'tpope/vim-fugitive'
   use 'tpope/vim-rhubarb'
-  use { 'lewis6991/gitsigns.nvim', -- git added/removed in sidebar + inline blame
+  use { 'lewis6991/gitsigns.nvim',
     requires = { 'nvim-lua/plenary.nvim' },
   }
 

@@ -1,3 +1,4 @@
+require'nvim-tree'.setup {} 
 require('telescope').setup{
   defaults = {
     vimgrep_arguments = {

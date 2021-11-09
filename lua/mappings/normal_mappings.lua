@@ -1,7 +1,4 @@
-local wk = require("which-key")
-local nops = {mode = 'n', silent = true, noremap = true}
-
-wk.register({
+local normal_mappings = {
   ["<leader>"] = {
     ["<space>"] = { "<cmd>Telescope find_files<cr>", "Find Files" },
     ["/"] = { "<cmd>Telescope live_grep<cr>", "Search in project" },
@@ -37,13 +34,24 @@ wk.register({
 
     s = {
       name = "+Search",
-      p = { "<cmd>Telescope live_grep<cr>", "Search in project" }
+      p = { "<cmd>Telescope live_grep<cr>", "Search in project" },
+      s = {"<cmd>SessionSave<cr>", "Session save"},
+      l = {"<cmd>SessionLoad<cr>", "Session load"},
     },
 
     t = {
       name = "+Toggle",
       c = {"<cmd>Telescope colorscheme<cr>", "Colorscheme"}
+    },
+
+    w = {
+      h = {"<C-W><C-H>", "Move focus to left window"},
+      j = {"<C-W><C-J>", "Move focus to above window"},
+      k = {"<C-W><C-K>", "Move focus to below window"},
+      l = {"<C-W><C-L>", "Move focus to right window"},
     }
 
   },
-}, nops)
+}
+
+return normal_mappings
