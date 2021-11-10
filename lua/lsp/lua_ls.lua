@@ -14,7 +14,7 @@ require('lspconfig').sumneko_lua.setup {
       },
 
       diagnostics = {
-        globals = {'vim'}
+        globals = {'vim', 'use'}
       },
 
       workspace = {
