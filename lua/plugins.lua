@@ -1,15 +1,15 @@
 vim.cmd [[packadd packer.nvim]]
 
-return require('packer').startup(function()
+local setup = function()
   -- Core functionality
   use 'wbthomason/packer.nvim'
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  use { 
-    'nvim-telescope/telescope.nvim', 
+  use {
+    'nvim-telescope/telescope.nvim',
     requires = {
-      {'nvim-lua/popup.nvim'}, 
+      {'nvim-lua/popup.nvim'},
       {'nvim-lua/plenary.nvim'}
-    } 
+    }
   }
   use {
     'nvim-lualine/lualine.nvim',
@@ -42,6 +42,8 @@ return require('packer').startup(function()
   use 'hrsh7th/cmp-vsnip'
   use 'hrsh7th/vim-vsnip'
 
+  -- Language Support
+
   -- VCS plugins
   use 'tpope/vim-fugitive'
   use 'tpope/vim-rhubarb'
@@ -54,5 +56,17 @@ return require('packer').startup(function()
 
   -- Extras
   use 'wakatime/vim-wakatime'
-end)
+end
+
+local options = {
+  config = {
+    display = {
+      open_fn = function ()
+        return require('packer.util').float({ border = 'single' })
+      end
+    }
+  }
+}
+
+return require('packer').startup({ setup, options })
 
