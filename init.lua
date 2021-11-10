@@ -1,5 +1,6 @@
 -- Neovim configuration
 require('plugins')
+require('globals')
 require('settings')
 
 -- Editor features
