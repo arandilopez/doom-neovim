@@ -9,6 +9,8 @@ local search = require('mappings.search')
 local session = require('mappings.session')
 local window = require('mappings.window')
 
+vim.g.mapleader = ' ' -- Space
+
 wk.register({
   ["<leader>"] = {
     ["<space>"] = { "<cmd>Telescope find_files<cr>", "Find Files" },

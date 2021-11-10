@@ -1,6 +1,4 @@
 local set = vim.opt
-local global = vim.g
-global.mapleader = ' '
 
 vim.cmd([[
 autocmd!
