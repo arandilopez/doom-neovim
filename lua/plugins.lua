@@ -26,6 +26,7 @@ return require('packer').startup(function()
   use 'glepnir/dashboard-nvim'
   use 'windwp/nvim-autopairs'
   use 'moll/vim-bbye'
+  use 'junegunn/goyo.vim'
 
   -- Mappings
   use "folke/which-key.nvim"
