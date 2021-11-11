@@ -2,6 +2,7 @@ local wk = require("which-key")
 local opts = {mode = 'n', silent = true, noremap = true}
 local iopts = {mode = 'i', silent = true, noremap = true}
 local buffers = require('mappings.buffers')
+local empty_lines = require('mappings.empty_lines')
 local files = require('mappings.files')
 local git = require('mappings.git')
 local lsp = require('mappings.lsp')
@@ -22,6 +23,7 @@ wk.register({
   }
 }, opts)
 wk.register(buffers, opts)
+wk.register(empty_lines, opts)
 wk.register(files, opts)
 wk.register(git, opts)
 wk.register(lsp, opts)

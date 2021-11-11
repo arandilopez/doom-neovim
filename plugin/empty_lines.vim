@@ -12,34 +12,3 @@ function! AddEmptyLineAbove()
   end
   let &scrolloff = l:scrolloffsave
 endfunction
-
-function! DelEmptyLineBelow()
-  if line(".") == line("$")
-    return
-  end
-  let l:line = getline(line(".") + 1)
-  if l:line =~ '^\s*$'
-    let l:colsave = col(".")
-    .+1d
-    ''
-    call cursor(line("."), l:colsave)
-  end
-endfunction
-
-function! DelEmptyLineAbove()
-  if line(".") == 1
-    return
-  end
-  let l:line = getline(line(".") - 1)
-  if l:line =~ '^\s*$'
-    let l:colsave = col(".")
-    .-1d
-    silent normal! <C-y>
-    call cursor(line("."), l:colsave)
-  end
-endfunction
-
-noremap <silent>}o :call DelEmptyLineBelow()<CR>
-noremap <silent>{o :call DelEmptyLineAbove()<CR>
-noremap <silent>]o :call AddEmptyLineBelow()<CR>
-noremap <silent>[o :call AddEmptyLineAbove()<CR>
