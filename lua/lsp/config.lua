@@ -1,3 +1,6 @@
+local protocol = require'vim.lsp.protocol'
+
+-- Generic on_attach callback
 local on_attach = function(client, bufnr)
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
   buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
@@ -24,10 +27,10 @@ local on_attach = function(client, bufnr)
     vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
     vim.api.nvim_command [[augroup END]]
   end
+
 end
 
--- Setup lspconfig.
-local protocol = require'vim.lsp.protocol'
+-- Generic capabilities with completion support
 local capabilities = require('cmp_nvim_lsp').update_capabilities(protocol.make_client_capabilities())
 
 return {
