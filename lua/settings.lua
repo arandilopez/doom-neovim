@@ -26,8 +26,8 @@ set.smarttab = true
 set.expandtab = true
 set.cursorline = true
 set.showmatch = true
--- set.list = true
--- set.listchars = {trail = '·', space = '·', tab = '»·', eol = '¬'}
+set.list = true
+set.listchars = {trail = '·', space = '·', tab = '»·', eol = '¬'}
 set.showmode = false
 set.backspace = '2'
 set.wildignore = set.wildignore + {'*/tmp/*', '*/vendor/*', '*/node_modules/*', '*/.git/*', '*/log/*', '*.so', '*.swp', '*.zip'}
