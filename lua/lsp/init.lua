@@ -1,3 +1,4 @@
+require('lsp.elixir')
 require('lsp.graphql')
 require('lsp.lua_ls')
 require('lsp.prisma')
