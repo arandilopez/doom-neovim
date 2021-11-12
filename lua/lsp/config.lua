@@ -20,7 +20,7 @@ local on_attach = function(client, bufnr)
   vim.cmd("command! LspDiagNext lua vim.lsp.diagnostic.goto_next()")
   vim.cmd("command! LspDiagLine lua vim.lsp.diagnostic.show_line_diagnostics()")
 
-  -- formatting
+  -- Autoformatting
   if client.resolved_capabilities.document_formatting then
     vim.api.nvim_command [[augroup Format]]
     vim.api.nvim_command [[autocmd! * <buffer>]]
