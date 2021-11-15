@@ -20,7 +20,7 @@ local setup = function()
     requires = 'kyazdani42/nvim-web-devicons',
   }
   use 'tpope/vim-surround'
-  use 'tpope/vim-commentary'
+  use 'b3nj5m1n/kommentary'
   use 'tpope/vim-endwise'
   use 'andymass/vim-matchup'
   use 'glepnir/dashboard-nvim'
