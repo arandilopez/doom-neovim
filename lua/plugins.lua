@@ -44,6 +44,7 @@ local setup = function()
   use 'hrsh7th/vim-vsnip'
 
   -- Language Support
+  use 'TovarishFin/vim-solidity'
 
   -- VCS plugins
   use 'tpope/vim-fugitive'
