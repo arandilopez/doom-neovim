@@ -1,7 +1,8 @@
 return {
   ["<Leader>"] = {
     c = {
-      a = { "<cmd>LspCodeAction<cr>", "Code Action" },
+      a = { "<cmd>LspCodeAction<cr>", "Code action" },
+      d = { "<cmd>LspDiagLine<cr>", "Code diagnostics" },
       f = { "<cmd>LspFormatting<cr>", "Formatting" },
       r = { "<cmd>LspRename<cr>", "Rename" },
     }
