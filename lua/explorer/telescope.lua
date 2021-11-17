@@ -39,5 +39,12 @@ require('telescope').setup{
 
     -- Developer configurations: Not meant for general override
     buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker
+  },
+  extensions = {
+    project = {
+      base_dirs = { '~/Code' },
+      hidden_files = true
+    }
   }
 }
+require'telescope'.load_extension('project')

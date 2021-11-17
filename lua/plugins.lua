@@ -8,7 +8,8 @@ local setup = function()
     'nvim-telescope/telescope.nvim',
     requires = {
       {'nvim-lua/popup.nvim'},
-      {'nvim-lua/plenary.nvim'}
+      {'nvim-lua/plenary.nvim'},
+      {'nvim-telescope/telescope-project.nvim'}
     }
   }
   use {
