@@ -5,6 +5,8 @@ return {
       d = { "<cmd>LspDiagLine<cr>", "Code diagnostics" },
       f = { "<cmd>LspFormatting<cr>", "Formatting" },
       r = { "<cmd>LspRename<cr>", "Rename" },
+      ["["] = {"<cmd>LspDiagPrev<cr>", "Previous diagnostics issue"},
+      ["]"] = {"<cmd>LspDiagNext<cr>", "Next diagnostics issue"},
     }
   },
 
