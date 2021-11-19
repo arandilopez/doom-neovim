@@ -6,6 +6,7 @@ return {
       B = { "<cmd>Git blame<cr>", "Git blame" },
       b = { "<cmd>Telescope git_branches<cr>", "Git branch switch" },
       i = { "<cmd>Gitsigns toggle_current_line_blame<cr>", "Toogle inline git blame" },
+      s = { "<cmd>Telescope git_status<cr>", "Files in git status" },
     },
   }
 }
