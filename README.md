@@ -9,7 +9,7 @@ But if you want a _vim-like_ editor, well, you'll just use vim right? And you're
 
 That said, you should try [Neovim](https://neovim.io/)
 
-I created these settings to work as I do with DOOM Emacs, as far as possible.
+I created these settings to work as I do with Doom Emacs, as far as possible.
 
 ### Installation
 
