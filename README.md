@@ -1,10 +1,10 @@
-# DOOM Neovim
+# Doom Neovim
 
 ![](assets/demo.png)
 
 Not really, just kiddin'. 
 
-I really love [DOOM Emacs](https://github.com/hlissner/doom-emacs) and I encourage you to try it. It's the best text editor I tried so far.
+I really love [Doom Emacs](https://github.com/hlissner/doom-emacs) and I encourage you to try it. It's the best text editor I tried so far.
 But if you want a _vim-like_ editor, well, you'll just use vim right? And you're correct.
 
 That said, you should try [Neovim](https://neovim.io/)
