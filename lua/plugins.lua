@@ -43,6 +43,7 @@ local setup = function()
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-vsnip'
   use 'hrsh7th/vim-vsnip'
+  use 'f3fora/cmp-spell'
 
   -- Language Support
   use 'TovarishFin/vim-solidity'
