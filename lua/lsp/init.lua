@@ -1,8 +1,10 @@
+require('lsp.docker')
 require('lsp.elixir')
 require('lsp.graphql')
 require('lsp.lua_ls')
 require('lsp.prisma')
 require('lsp.ruby')
+require('lsp.tailwindcss')
 require('lsp.typescript')
 
 -- Customize inline diagnostics
