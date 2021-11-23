@@ -24,7 +24,7 @@ END
 let g:dashboard_default_executive ='telescope.nvim'
 let g:dashboard_custom_shortcut={
 \ 'last_session'       : 'SPC q l',
-\ 'find_history'       : 'SPC f h',
+\ 'find_history'       : 'SPC f r',
 \ 'find_file'          : 'SPC f f',
 \ 'new_file'           : 'SPC f n',
 \ 'change_colorscheme' : 'SPC t c',
