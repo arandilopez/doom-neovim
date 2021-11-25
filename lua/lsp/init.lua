@@ -4,6 +4,7 @@ require('lsp.graphql')
 require('lsp.lua_ls')
 require('lsp.prisma')
 require('lsp.ruby')
+require('lsp.solidity')
 require('lsp.tailwindcss')
 require('lsp.typescript')
 
