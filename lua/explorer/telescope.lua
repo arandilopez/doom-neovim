@@ -1,7 +1,8 @@
 require('telescope').setup{
   defaults = {
     vimgrep_arguments = {
-      'rg', '--color=never',
+      'rg',
+      '--color=never',
       '--no-heading',
       '--with-filename',
       '--line-number',
@@ -27,8 +28,6 @@ require('telescope').setup{
     file_ignore_patterns = {},
     generic_sorter =  require'telescope.sorters'.get_generic_fuzzy_sorter,
     winblend = 0,
-    -- border = {},
-    -- borderchars = { '?', '?', '?', '?', '?', '?', '?', '?' },
     color_devicons = true,
     use_less = true,
     path_display = {},
@@ -39,6 +38,12 @@ require('telescope').setup{
 
     -- Developer configurations: Not meant for general override
     buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker
+  },
+  pickers = {
+    buffers = {
+      sort_lastused = true,
+      sort_mru = true,
+    }
   },
   extensions = {
     project = {
