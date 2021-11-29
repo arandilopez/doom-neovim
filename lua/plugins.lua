@@ -63,14 +63,15 @@ local setup = function()
 end
 
 local options = {
-  config = {
-    display = {
-      open_fn = function ()
-        return require('packer.util').float({ border = 'single' })
-      end
-    }
+  display = {
+    open_fn = function ()
+      return require('packer.util').float({ border = 'rounded' })
+    end
   }
 }
 
-return require('packer').startup({ setup, options })
+local packer = require('packer')
+
+packer.init(options)
+packer.startup(setup)
 
