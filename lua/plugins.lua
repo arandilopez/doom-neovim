@@ -29,6 +29,7 @@ local setup = function()
   use 'windwp/nvim-autopairs'
   use 'moll/vim-bbye'
   use 'junegunn/goyo.vim'
+  use 'dkarter/bullets.vim'
 
   -- Mappings
   use "folke/which-key.nvim"
