@@ -50,6 +50,6 @@ set.splitright = true
 set.clipboard = 'unnamedplus'
 set.shell = 'zsh'
 set.exrc = true
-
+set.inccommand = 'split'
 -- Remove trailing whitespace on save
 vim.cmd("autocmd BufWritePre * :%s/\\s\\+$//e")
