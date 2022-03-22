@@ -2,19 +2,18 @@ return {
   ["<Leader>"] = {
     c = {
       a = { "<cmd>LspCodeAction<cr>", "Code action" },
-      d = { "<cmd>LspDiagLine<cr>", "Code diagnostics" },
-      f = { "<cmd>LspFormatting<cr>", "Formatting" },
+      f = { "<cmd>LspFormatting<cr>", "Code Formatting" },
       r = { "<cmd>LspRename<cr>", "Rename" },
-      ["["] = {"<cmd>LspDiagPrev<cr>", "Previous diagnostics issue"},
-      ["]"] = {"<cmd>LspDiagNext<cr>", "Next diagnostics issue"},
+      R = { "<cmd>LspReferences<cr>", "Got to references" },
+      d = { "<cmd>LspDiagnostic<cr>", "Code diagnostics" },
     }
   },
 
   g = {
-    D = { "<cmd>LspDeclaration<cr>", "Declaration" },
-    d = { "<cmd>LspDefinition<cr>", "Definition" },
-    i = { "<cmd>LspImplementation<cr>", "Implementation" },
-    R = { "<cmd>LspReferences<cr>", "References" },
+    D = { "<cmd>LspDeclaration<cr>", "Go to declaration" },
+    d = { "<cmd>LspDefinition<cr>", "Go to definition" },
+    i = { "<cmd>LspImplementation<cr>", "Go to implementation" },
+    R = { "<cmd>LspReferences<cr>", "Go to references" },
   },
 
   K = { "<cmd>LspHover<cr>", "Show help/docs" },

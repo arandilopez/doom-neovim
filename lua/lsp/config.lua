@@ -16,9 +16,7 @@ local on_attach = function(client, bufnr)
   vim.cmd("command! LspTypeDefinition lua vim.lsp.buf.type_definition()")
   vim.cmd("command! LspImplementation lua vim.lsp.buf.implementation()")
   vim.cmd("command! LspSignatureHelp lua vim.lsp.buf.signature_help()")
-  vim.cmd("command! LspDiagPrev lua vim.lsp.diagnostic.goto_prev()")
-  vim.cmd("command! LspDiagNext lua vim.lsp.diagnostic.goto_next()")
-  vim.cmd("command! LspDiagLine lua vim.lsp.diagnostic.show_line_diagnostics()")
+  vim.cmd("command! LspDiagnostic lua vim.diagnostic.setqflist()")
 
   -- Autoformatting
   if client.resolved_capabilities.document_formatting then
