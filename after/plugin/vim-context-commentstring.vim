@@ -7,3 +7,5 @@ let g:context#commentstring#table['javascriptreact'] = {
 let g:context#commentstring#table['typescriptreact'] = {
       \ 'tsxRegion' : '{/*%s*/}',
       \}
+
+autocmd FileType prisma setlocal commentstring=//\ %s
