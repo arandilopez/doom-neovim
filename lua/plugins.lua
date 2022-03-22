@@ -61,6 +61,11 @@ local setup = function()
 
   -- Extras
   use 'wakatime/vim-wakatime'
+  use {
+    'iamcco/markdown-preview.nvim',
+    run = 'cd app && yarn install', cmd = 'MarkdownPreview',
+    ft = {'markdown'}
+  }
 end
 
 local options = {
