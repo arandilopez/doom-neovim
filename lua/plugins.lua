@@ -80,4 +80,3 @@ local packer = require('packer')
 
 packer.init(options)
 packer.startup(setup)
-
