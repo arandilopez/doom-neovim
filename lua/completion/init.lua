@@ -1,5 +1,7 @@
 -- Setup nvim-cmp.
 local cmp = require'cmp'
+local types = require'cmp.types'
+local misc = require'cmp.utils.misc'
 local completionItemKindMap = {
   '', -- Text
   '', -- Method
@@ -29,15 +31,17 @@ local completionItemKindMap = {
 }
 
 local defaultMapping = {
-    ['<CR>'] = cmp.mapping.confirm({ select = true }),
-    ['<Tab>'] = function(fallback)
-      if cmp.visible() then
-        cmp.select_next_item()
-      else
-        fallback()
-      end
-    end
-  }
+  ['<CR>'] = cmp.mapping.confirm({ select = true }),
+}
+
+local insertMapping = misc.merge(defaultMapping, {
+  ['<Tab>'] = {
+    i = cmp.mapping.select_next_item({ behavior = types.cmp.SelectBehavior.Select }),
+  },
+  ['<S-Tab>'] = {
+    i = cmp.mapping.select_prev_item({ behavior = types.cmp.SelectBehavior.Select }),
+  },
+})
 
 cmp.setup({
   snippet = {
@@ -45,7 +49,7 @@ cmp.setup({
       vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
     end,
   },
-  mapping = cmp.mapping.preset.insert(defaultMapping),
+  mapping = cmp.mapping.preset.insert(insertMapping),
   formatting = {
     format = function(entry, vim_item)
       vim_item.kind = completionItemKindMap[entry:get_completion_item().kind]
