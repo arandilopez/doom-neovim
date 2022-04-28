@@ -30,6 +30,7 @@ local setup = function()
   use 'moll/vim-bbye'
   use 'junegunn/goyo.vim'
   use 'dkarter/bullets.vim'
+  use 'gpanders/editorconfig.nvim'
 
   -- Mappings
   use "folke/which-key.nvim"
