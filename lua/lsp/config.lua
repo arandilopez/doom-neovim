@@ -19,7 +19,7 @@ local on_attach = function(client, bufnr)
   vim.cmd("command! LspDiagnostic lua vim.diagnostic.setqflist()")
 
   -- Autoformatting
-  if client.resolved_capabilities.document_formatting then
+  if client.server_capabilities.document_formatting then
     vim.api.nvim_command [[augroup Format]]
     vim.api.nvim_command [[autocmd! * <buffer>]]
     vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
