@@ -7,6 +7,7 @@ require('lsp.ruby')
 require('lsp.solidity')
 require('lsp.tailwindcss')
 require('lsp.typescript')
+require('lsp.vuejs')
 
 -- Customize inline diagnostics
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(

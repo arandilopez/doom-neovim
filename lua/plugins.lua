@@ -49,6 +49,7 @@ local setup = function()
 
   -- Language Support
   use 'TovarishFin/vim-solidity'
+  use 'watzon/vim-edge-template'
 
   -- VCS plugins
   use 'tpope/vim-fugitive'
