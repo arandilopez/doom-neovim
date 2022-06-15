@@ -2,7 +2,7 @@ return {
   ["<Leader>"] = {
     c = {
       a = { "<cmd>LspCodeAction<cr>", "Code action" },
-      f = { "<cmd>LspFormatting<cr>", "Code Formatting" },
+      f = { "<cmd>FormatWrite<cr>", "Code Formatting" },
       r = { "<cmd>LspRename<cr>", "Rename" },
       R = { "<cmd>LspReferences<cr>", "Got to references" },
       d = { "<cmd>LspDiagnostic<cr>", "Code diagnostics" },
