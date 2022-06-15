@@ -35,7 +35,7 @@ local setup = function()
   -- Mappings
   use "folke/which-key.nvim"
 
-  -- LSP
+  -- LSP and formatting
   use 'neovim/nvim-lspconfig'
   use 'kabouzeid/nvim-lspinstall'
   use 'hrsh7th/cmp-nvim-lsp'
@@ -46,6 +46,7 @@ local setup = function()
   use 'hrsh7th/cmp-vsnip'
   use 'hrsh7th/vim-vsnip'
   use 'f3fora/cmp-spell'
+  use 'mhartington/formatter.nvim'
 
   -- Language Support
   use 'TovarishFin/vim-solidity'
