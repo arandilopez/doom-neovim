@@ -1,41 +1,74 @@
-vim.cmd([[
-let g:dashboard_custom_header =<< trim END
-=================     ===============     ===============   ========  ========
-\\ . . . . . . .\\   //. . . . . . .\\   //. . . . . . .\\  \\. . .\\// . . //
-||. . ._____. . .|| ||. . ._____. . .|| ||. . ._____. . .|| || . . .\/ . . .||
-|| . .||   ||. . || || . .||   ||. . || || . .||   ||. . || ||. . . . . . . ||
-||. . ||   || . .|| ||. . ||   || . .|| ||. . ||   || . .|| || . | . . . . .||
-|| . .||   ||. _-|| ||-_ .||   ||. . || || . .||   ||. _-|| ||-_.|\ . . . . ||
-||. . ||   ||-'  || ||  `-||   || . .|| ||. . ||   ||-'  || ||  `|\_ . .|. .||
-|| . _||   ||    || ||    ||   ||_ . || || . _||   ||    || ||   |\ `-_/| . ||
-||_-' ||  .|/    || ||    \|.  || `-_|| ||_-' ||  .|/    || ||   | \  / |-_.||
-||    ||_-'      || ||      `-_||    || ||    ||_-'      || ||   | \  / |  `||
-||    `'         || ||         `'    || ||    `'         || ||   | \  / |   ||
-||            .===' `===.         .==='.`===.         .===' /==. |  \/  |   ||
-||         .=='   \_|-_ `===. .==='   _|_   `===. .===' _-|/   `==  \/  |   ||
-||      .=='    _-'    `-_  `='    _-'   `-_    `='  _-'   `-_  /|  \/  |   ||
-||   .=='    _-'          '-__\._-'         '-_./__-'         `' |. /|  |   ||
-||.=='    _-'                                                     `' |  /==.||
-=='    _-'                        N E O V I M                         \/   `==
-\   _-'                                                                `-_   /
- `''                                                                      ``'
-END
+  -- local home = os.getenv('HOME')
+  -- local db = require('dashboard')
+  -- db.preview_command = 'cat | lolcat -F 0.3'
+  -- db.preview_file_path = home .. '/.config/nvim/static/neovim.cat'
+  -- db.preview_file_height = 12
+  -- db.preview_file_width = 80
+  -- db.custom_center = {
+  --     {icon = '  ',
+  --     desc = 'Recently laset session                  ',
+  --     shortcut = 'SPC s l',
+  --     action ='SessionLoad'},
+  --     {icon = '  ',
+  --     desc = 'Recently opened files                   ',
+  --     action =  'DashboardFindHistory',
+  --     shortcut = 'SPC f h'},
+  --     {icon = '  ',
+  --     desc = 'Find  File                              ',
+  --     action = 'Telescope find_files find_command=rg,--hidden,--files',
+  --     shortcut = 'SPC f f'},
+  --     {icon = '  ',
+  --     desc ='File Browser                            ',
+  --     action =  'Telescope file_browser',
+  --     shortcut = 'SPC f b'},
+  --     {icon = '  ',
+  --     desc = 'Find  word                              ',
+  --     aciton = 'DashboardFindWord',
+  --     shortcut = 'SPC f w'},
+  --     {icon = '  ',
+  --     desc = 'Open Personal dotfiles                  ',
+  --     action = 'Telescope dotfiles path=' .. home ..'/.dotfiles',
+  --     shortcut = 'SPC f d'},
+  --   }
 
-let g:dashboard_default_executive ='telescope.nvim'
-let g:dashboard_custom_shortcut={
-\ 'last_session'       : 'SPC q l',
-\ 'find_history'       : 'SPC f r',
-\ 'find_file'          : 'SPC f f',
-\ 'new_file'           : 'SPC f n',
-\ 'change_colorscheme' : 'SPC t c',
-\ 'find_word'          : 'SPC s p',
-\ 'book_marks'         : 'SPC f b',
-\ }
+-- vim.cmd([[
+-- let g:dashboard_custom_header =<< trim END
+-- "=================     ===============     ===============   ========  ========"
+-- "\\ . . . . . . .\\   //. . . . . . .\\   //. . . . . . .\\  \\. . .\\// . . //"
+-- "||. . ._____. . .|| ||. . ._____. . .|| ||. . ._____. . .|| || . . .\/ . . .||"
+-- "|| . .||   ||. . || || . .||   ||. . || || . .||   ||. . || ||. . . . . . . ||"
+-- "||. . ||   || . .|| ||. . ||   || . .|| ||. . ||   || . .|| || . | . . . . .||"
+-- "|| . .||   ||. _-|| ||-_ .||   ||. . || || . .||   ||. _-|| ||-_.|\ . . . . ||"
+-- "||. . ||   ||-'  || ||  `-||   || . .|| ||. . ||   ||-'  || ||  `|\_ . .|. .||"
+-- "|| . _||   ||    || ||    ||   ||_ . || || . _||   ||    || ||   |\ `-_/| . ||"
+-- "||_-' ||  .|/    || ||    \|.  || `-_|| ||_-' ||  .|/    || ||   | \  / |-_.||"
+-- "||    ||_-'      || ||      `-_||    || ||    ||_-'      || ||   | \  / |  `||"
+-- "||    `'         || ||         `'    || ||    `'         || ||   | \  / |   ||"
+-- "||            .===' `===.         .==='.`===.         .===' /==. |  \/  |   ||"
+-- "||         .=='   \_|-_ `===. .==='   _|_   `===. .===' _-|/   `==  \/  |   ||"
+-- "||      .=='    _-'    `-_  `='    _-'   `-_    `='  _-'   `-_  /|  \/  |   ||"
+-- "||   .=='    _-'          '-__\._-'         '-_./__-'         `' |. /|  |   ||"
+-- "||.=='    _-'                                                     `' |  /==.||"
+-- "=='    _-'                        N E O V I M                         \/   `=="
+-- "\   _-'                                                                `-_   /"
+-- "`''                                                                      ``'"
+-- END
 
-let g:dashboard_session_directory = $HOME..'/.config/nvim/.sessions'
-let packages = len(globpath('~/.local/share/nvim/site/pack/packer/start', '*', 0, 1))
-]])
+-- let g:dashboard_default_executive ='telescope.nvim'
+-- let g:dashboard_custom_shortcut={
+--   \ 'last_session'       : 'SPC q l',
+--   \ 'find_history'       : 'SPC f r',
+--   \ 'find_file'          : 'SPC f f',
+--   \ 'new_file'           : 'SPC f n',
+--   \ 'change_colorscheme' : 'SPC t c',
+--   \ 'find_word'          : 'SPC s p',
+--   \ 'book_marks'         : 'SPC f b',
+--   \ }""""""""
 
-vim.api.nvim_exec([[
-let g:dashboard_custom_footer = ['Doom loaded '..packages..' packages']
-]], false)
+-- let g:dashboard_session_directory = $HOME..'/.config/nvim/.sessions'
+-- let packages = len(globpath('~/.local/share/nvim/site/pack/packer/start', '*', 0, 1))
+-- ]])
+
+-- vim.api.nvim_exec([[
+-- let g:dashboard_custom_footer = ['Doom loaded '..packages..' packages']
+-- ]], false)

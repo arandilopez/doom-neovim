@@ -25,7 +25,7 @@ local setup = function()
   use 'suy/vim-context-commentstring'
   use 'tpope/vim-endwise'
   use 'andymass/vim-matchup'
-  use 'glepnir/dashboard-nvim'
+  -- use 'glepnir/dashboard-nvim'
   use 'windwp/nvim-autopairs'
   use 'moll/vim-bbye'
   use 'junegunn/goyo.vim'
