@@ -53,3 +53,10 @@ set.exrc = true
 set.inccommand = 'split'
 -- Remove trailing whitespace on save
 vim.cmd("autocmd BufWritePre * :%s/\\s\\+$//e")
+
+-- Fold settings
+-- vim.wo.foldcolumn = '1'
+vim.wo.foldlevel = 99
+vim.wo.foldenable = true
+vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
+vim.cmd('hi default link UfoFoldedEllipsis Comment')

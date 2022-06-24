@@ -31,6 +31,8 @@ local setup = function()
   use 'junegunn/goyo.vim'
   use 'dkarter/bullets.vim'
   use 'gpanders/editorconfig.nvim'
+  use 'https://gitlab.com/yorickpeterse/nvim-pqf.git'
+  use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
 
   -- Mappings
   use "folke/which-key.nvim"

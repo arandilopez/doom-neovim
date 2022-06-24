@@ -21,6 +21,11 @@ end
 -- Generic capabilities with completion support
 local capabilities = require('cmp_nvim_lsp').update_capabilities(protocol.make_client_capabilities())
 
+capabilities.textDocument.foldingRange = {
+    dynamicRegistration = false,
+    lineFoldingOnly = true
+}
+
 return {
   on_attach = on_attach,
   capabilities = capabilities
