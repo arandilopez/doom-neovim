@@ -2,7 +2,7 @@ local db = require('dashboard')
 
 db.custom_center = {
   {icon = '  ',
-  desc = 'Recent session                 ',
+  desc = 'Recent session                          ',
   shortcut = 'SPC q l',
   action ='SessionLoad'},
   {icon = '  ',
