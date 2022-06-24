@@ -1,4 +1,3 @@
-local home = os.getenv('HOME')
 local db = require('dashboard')
 
 db.custom_center = {
@@ -22,10 +21,6 @@ db.custom_center = {
   desc = 'Find  word                              ',
   aciton = 'DashboardFindWord',
   shortcut = 'SPC s p'},
-  {icon = '  ',
-  desc = 'Open Personal dotfiles                  ',
-  action = 'Telescope dotfiles path=' .. home ..'/.dotfiles',
-  shortcut = 'SPC f d'},
 }
 
 db.custom_header = {
