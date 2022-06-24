@@ -33,6 +33,7 @@ local setup = function()
   use 'gpanders/editorconfig.nvim'
   use 'https://gitlab.com/yorickpeterse/nvim-pqf.git'
   use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
+  use 'xiyaowong/nvim-transparent'
 
   -- Mappings
   use "folke/which-key.nvim"
