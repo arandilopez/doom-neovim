@@ -16,7 +16,7 @@ require('formatter').setup {
     },
 
     ruby = {
-      require('formatter.filetypes.ruby').rubocop()
+      require('formatter.filetypes.ruby').rubocop
     },
   }
 }
