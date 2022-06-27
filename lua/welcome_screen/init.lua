@@ -10,7 +10,7 @@ db.custom_center = {
   action =  'DashboardFindHistory',
   shortcut = 'SPC f r'},
   {icon = '  ',
-  desc = 'Find  File                              ',
+  desc = 'Find File                               ',
   action = 'Telescope find_files find_command=rg,--hidden,--files',
   shortcut = 'SPC f f'},
   {icon = '  ',
@@ -18,7 +18,7 @@ db.custom_center = {
   action =  'Telescope file_browser',
   shortcut = 'SPC o p'},
   {icon = '  ',
-  desc = 'Find  word                              ',
+  desc = 'Find word                               ',
   aciton = 'DashboardFindWord',
   shortcut = 'SPC s p'},
 }
