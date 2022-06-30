@@ -2,24 +2,20 @@ local db = require('dashboard')
 
 db.custom_center = {
   {icon = '  ',
-  desc = 'Recent session                          ',
-  shortcut = 'SPC q l',
-  action ='SessionLoad'},
+  desc = 'Open last session                       ',
+  shortcut = 'SPC q l'},
   {icon = '  ',
   desc = 'Recently opened files                   ',
   action =  'DashboardFindHistory',
   shortcut = 'SPC f r'},
   {icon = '  ',
   desc = 'Find File                               ',
-  action = 'Telescope find_files find_command=rg,--hidden,--files',
   shortcut = 'SPC f f'},
   {icon = '  ',
   desc ='File Browser                            ',
-  action =  'Telescope file_browser',
   shortcut = 'SPC o p'},
   {icon = '  ',
   desc = 'Find word                               ',
-  aciton = 'DashboardFindWord',
   shortcut = 'SPC s p'},
 }
 

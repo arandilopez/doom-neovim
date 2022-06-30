@@ -55,7 +55,7 @@ set.inccommand = 'split'
 vim.cmd("autocmd BufWritePre * :%s/\\s\\+$//e")
 
 -- Fold settings
--- vim.wo.foldcolumn = '1'
+vim.wo.foldcolumn = '0'
 vim.wo.foldlevel = 99
 vim.wo.foldenable = true
 vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
