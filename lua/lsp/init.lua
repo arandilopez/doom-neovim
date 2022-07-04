@@ -6,6 +6,7 @@ require('lsp.prisma')
 require('lsp.ruby')
 require('lsp.solidity')
 require('lsp.tailwindcss')
+require('lsp.terraform')
 require('lsp.typescript')
 require('lsp.vuejs')
 
