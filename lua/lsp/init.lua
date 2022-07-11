@@ -1,5 +1,6 @@
 require('lsp.docker')
 require('lsp.elixir')
+require('lsp.go')
 require('lsp.graphql')
 require('lsp.lua_ls')
 require('lsp.prisma')

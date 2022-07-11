@@ -21,6 +21,10 @@ require('formatter').setup {
 
     elixir = {
       require('formatting.filetypes.elixir').mix
+    },
+
+    go = {
+      require('formatter.filetypes.go').goimports
     }
   }
 }
