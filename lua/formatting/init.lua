@@ -18,6 +18,10 @@ require('formatter').setup {
     ruby = {
       require('formatter.filetypes.ruby').rubocop
     },
+
+    elixir = {
+      require('formatting.filetypes.elixir').mix
+    }
   }
 }
 
