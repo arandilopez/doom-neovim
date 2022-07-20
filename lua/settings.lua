@@ -41,7 +41,7 @@ set.backup  = false
 set.writebackup = false
 set.cmdheight = 1
 set.laststatus = 2
-set.scrolloff = 10
+set.scrolloff = 5
 set.updatetime = 300
 set.shortmess:append('c')
 set.conceallevel = 0
