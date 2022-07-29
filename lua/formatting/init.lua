@@ -16,7 +16,7 @@ require('formatter').setup {
     },
 
     ruby = {
-      require('formatter.filetypes.ruby').rubocop
+      require('formatting.filetypes.ruby').rubocop
     },
 
     elixir = {
