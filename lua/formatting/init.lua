@@ -1,37 +1,37 @@
 -- Provides the Format and FormatWrite commands
-require('formatter').setup {
+require("formatter").setup({
   -- All formatter configurations are opt-in
   filetype = {
     javascript = {
-      require('formatter.filetypes.javascript').prettier
+      require("formatter.filetypes.javascript").prettier,
     },
     javascriptreact = {
-      require('formatter.filetypes.javascriptreact').prettier
+      require("formatter.filetypes.javascriptreact").prettier,
     },
     typescript = {
-      require('formatter.filetypes.typescript').prettier
+      require("formatter.filetypes.typescript").prettier,
     },
     typescriptreact = {
-      require('formatter.filetypes.typescriptreact').prettier
+      require("formatter.filetypes.typescriptreact").prettier,
     },
 
     ruby = {
-      require('formatting.filetypes.ruby').rubocop
+      require("formatting.filetypes.ruby").rubocop,
     },
 
     elixir = {
-      require('formatter.filetypes.elixir').mixformat
+      require("formatter.filetypes.elixir").mixformat,
     },
 
     go = {
-      require('formatter.filetypes.go').goimports
+      require("formatter.filetypes.go").goimports,
     },
 
     lua = {
       require("formatter.filetypes.lua").stylua,
-    }
-  }
-}
+    },
+  },
+})
 
 vim.cmd([[
   augroup FormatAutogroup
