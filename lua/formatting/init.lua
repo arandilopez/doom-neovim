@@ -20,7 +20,7 @@ require('formatter').setup {
     },
 
     elixir = {
-      require('formatting.filetypes.elixir').mix
+      require('formatter.filetypes.elixir').mixformat
     },
 
     go = {
