@@ -1,44 +1,18 @@
 -- Setup nvim-cmp.
-local cmp = require'cmp'
-local types = require'cmp.types'
-local misc = require'cmp.utils.misc'
-local completionItemKindMap = {
-  '', -- Text
-  '', -- Method
-  '', -- Function
-  '', -- Constructor
-  '', -- Field
-  '', -- Variable
-  '', -- Class
-  'ﰮ', -- Interface
-  '', -- Module
-  '', -- Property
-  '', -- Unit
-  '', -- Value
-  '', -- Enum
-  '', -- Keyword
-  '﬌', -- Snippet
-  '', -- Color
-  '', -- File
-  '', -- Reference
-  '', -- Folder
-  '', -- EnumMember
-  '', -- Constant
-  '', -- Struct
-  '', -- Event
-  'ﬦ', -- Operator
-  '', -- TypeParameter
-}
+local cmp = require("cmp")
+local types = require("cmp.types")
+local misc = require("cmp.utils.misc")
+local lspkind = require("lspkind")
 
 local defaultMapping = {
-  ['<CR>'] = cmp.mapping.confirm({ select = true }),
+  ["<CR>"] = cmp.mapping.confirm({ select = true }),
 }
 
 local insertMapping = misc.merge(defaultMapping, {
-  ['<Tab>'] = {
+  ["<Tab>"] = {
     i = cmp.mapping.select_next_item({ behavior = types.cmp.SelectBehavior.Select }),
   },
-  ['<S-Tab>'] = {
+  ["<S-Tab>"] = {
     i = cmp.mapping.select_prev_item({ behavior = types.cmp.SelectBehavior.Select }),
   },
 })
@@ -51,32 +25,32 @@ cmp.setup({
   },
   mapping = cmp.mapping.preset.insert(insertMapping),
   formatting = {
-    format = function(entry, vim_item)
-      vim_item.kind = completionItemKindMap[entry:get_completion_item().kind]
-      return vim_item
-    end
+    format = lspkind.cmp_format({
+      mode = "symbol", -- show only symbol annotations
+      maxwidth = 50, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
+    }),
   },
   sources = cmp.config.sources({
-    { name = 'nvim_lsp' },
-    { name = 'vsnip' }, -- For vsnip users.
-    { name = 'spell'},
+    { name = "nvim_lsp" },
+    { name = "vsnip" }, -- For vsnip users.
+    { name = "spell" },
   }, {
-    { name = 'buffer' },
-  })
-})
-
-cmp.setup.cmdline('/', {
-  sources = {
-    { name = 'buffer' }
-  },
-  mapping = cmp.mapping.preset.cmdline(defaultMapping)
-})
-
-cmp.setup.cmdline(':', {
-  sources = cmp.config.sources({
-    { name = 'path' }
-  }, {
-    { name = 'cmdline' }
+    { name = "buffer" },
   }),
-  mapping = cmp.mapping.preset.cmdline(defaultMapping)
+})
+
+cmp.setup.cmdline("/", {
+  sources = {
+    { name = "buffer" },
+  },
+  mapping = cmp.mapping.preset.cmdline(defaultMapping),
+})
+
+cmp.setup.cmdline(":", {
+  sources = cmp.config.sources({
+    { name = "path" },
+  }, {
+    { name = "cmdline" },
+  }),
+  mapping = cmp.mapping.preset.cmdline(defaultMapping),
 })
