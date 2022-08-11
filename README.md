@@ -2,7 +2,7 @@
 
 ![](assets/demo.png)
 
-Not really, just kidding. 
+Not really, just kidding.
 
 I really love [Doom Emacs](https://github.com/hlissner/doom-emacs) and I recommend you to try it. It's the best text editor I tried so far.
 But if you want a _vim-like_ editor, well, you'll just use vim right? And you're correct.
@@ -31,3 +31,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 3. Run `nvim`
 
 4. Install packages with `:PackerInstall`
+
+## Fonts
+
+Install one of the [Nerd Fonts](https://www.nerdfonts.com/font-downloads)
