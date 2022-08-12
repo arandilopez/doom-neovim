@@ -19,6 +19,10 @@ require("formatter").setup({
       require("formatting.filetypes.ruby").rubocop,
     },
 
+    rust = {
+      require("formatter.filetypes.rust").rustfmt,
+    },
+
     elixir = {
       require("formatter.filetypes.elixir").mixformat,
     },
