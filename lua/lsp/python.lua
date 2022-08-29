@@ -1,1 +1,14 @@
-require("lspconfig").pyright.setup({})
+local config = require("lsp.config")
+require("lspconfig").pyright.setup({
+  on_attach = config.on_attach,
+  capabilities = config.capabilities,
+  settings = {
+    python = {
+      analysis = {
+        autoSearchPaths = true,
+        diagnosticMode = "workspace",
+        useLibraryCodeForTypes = true,
+      },
+    },
+  },
+})
