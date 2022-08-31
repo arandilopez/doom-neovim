@@ -1,9 +1,11 @@
-local protocol = require'vim.lsp.protocol'
+local protocol = require("vim.lsp.protocol")
 
 -- Generic on_attach callback
-local on_attach = function(c, bufnr)
-  local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
-  buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
+local on_attach = function(client, bufnr)
+  local function buf_set_option(...)
+    vim.api.nvim_buf_set_option(bufnr, ...)
+  end
+  buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
 
   -- Commands
   vim.cmd("command! LspDeclaration lua vim.lsp.buf.declaration()")
@@ -19,15 +21,15 @@ local on_attach = function(c, bufnr)
 end
 
 -- Generic capabilities with completion support
-local capabilities = require('cmp_nvim_lsp').update_capabilities(protocol.make_client_capabilities())
+local capabilities = require("cmp_nvim_lsp").update_capabilities(protocol.make_client_capabilities())
 
 -- Capabilities for auto folding
 capabilities.textDocument.foldingRange = {
-    dynamicRegistration = false,
-    lineFoldingOnly = true
+  dynamicRegistration = false,
+  lineFoldingOnly = true,
 }
 
 return {
   on_attach = on_attach,
-  capabilities = capabilities
+  capabilities = capabilities,
 }
