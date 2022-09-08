@@ -65,6 +65,7 @@ local setup = function()
 
   -- Colorscheme
   use("navarasu/onedark.nvim")
+  use("dracula/vim")
 
   -- Extras
   use("wakatime/vim-wakatime")
