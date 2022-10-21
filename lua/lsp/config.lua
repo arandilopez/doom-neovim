@@ -1,7 +1,6 @@
-local protocol = require("vim.lsp.protocol")
-
+local M = {}
 -- Generic on_attach callback
-local on_attach = function(client, bufnr)
+M.on_attach = function(client, bufnr)
   local function buf_set_option(...)
     vim.api.nvim_buf_set_option(bufnr, ...)
   end
@@ -21,15 +20,12 @@ local on_attach = function(client, bufnr)
 end
 
 -- Generic capabilities with completion support
-local capabilities = require("cmp_nvim_lsp").update_capabilities(protocol.make_client_capabilities())
+M.capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 -- Capabilities for auto folding
-capabilities.textDocument.foldingRange = {
+M.capabilities.textDocument.foldingRange = {
   dynamicRegistration = false,
   lineFoldingOnly = true,
 }
 
-return {
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
+return M
