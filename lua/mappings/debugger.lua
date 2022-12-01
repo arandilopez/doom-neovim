@@ -11,6 +11,10 @@ return {
       r = { "<cmd>lua require('dap').repl.open()<cr>", "Open REPL session" },
       K = { "<cmd>lua require('dap.ui.widgets').hover()<cr>", "View the value of the expression under cursor" },
       O = { "<cmd>lua require('dapui').toggle()<cr>", "Toggle DAP UI" },
+      C = {
+        "<Cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>",
+        "Create a conditional breakpoint",
+      },
     },
   },
 }
