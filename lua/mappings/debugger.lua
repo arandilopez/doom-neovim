@@ -1,5 +1,10 @@
 return {
 
+  ["<F5>"] = { "<cmd>lua require('dap').continue()<cr>", "Continue to next breakpoint" },
+  ["<F10>"] = { "<cmd>lua require('dap').step_over()<cr>", "Step over" },
+  ["<F11>"] = { "<cmd>lua require('dap').step_into()<cr>", "Step into" },
+  ["<F12>"] = { "<cmd>lua require('dap').step_out()<cr>", "Step out" },
+
   ["<Leader>"] = {
     d = {
       name = "+Debugger",
@@ -15,6 +20,7 @@ return {
         "<Cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>",
         "Create a conditional breakpoint",
       },
+      D = { "<Cmd>lua require'dap'.clear_breakpoints()<CR>", "Clear all breakpoints" },
     },
   },
 }
