@@ -58,6 +58,13 @@ vim.cmd("autocmd BufWritePre * :%s/\\s\\+$//e")
 -- Fold settings
 vim.wo.foldcolumn = "0"
 vim.wo.foldlevel = 99
+vim.o.foldlevelstart = 99
 vim.wo.foldenable = true
 vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
-vim.cmd("hi default link UfoFoldedEllipsis Comment")
+vim.cmd([[
+hi default link UfoPreviewSbar PmenuSbar
+hi default link UfoPreviewThumb PmenuThumb
+hi default link UfoPreviewWinBar UfoFoldedBg
+hi default link UfoPreviewCursorLine Visual
+hi default link UfoFoldedEllipsis Comment
+]])
