@@ -21,6 +21,9 @@ require("nvim-tree").setup({
       error = "",
     },
   },
+  git = {
+    ignore = true,
+  },
   update_focused_file = {
     enable = false,
     update_cwd = false,
@@ -35,10 +38,10 @@ require("nvim-tree").setup({
     custom = {},
   },
   view = {
+    adaptive_size = true,
     width = 30,
     hide_root_folder = false,
     side = "left",
-    -- auto_resize = true,
     mappings = {
       custom_only = false,
       list = {},
