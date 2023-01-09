@@ -82,6 +82,7 @@ local setup = function()
   use("dracula/vim")
 
   -- Extras
+  use("github/copilot.vim")
   use("wakatime/vim-wakatime")
   use({
     "iamcco/markdown-preview.nvim",
