@@ -8,6 +8,9 @@ let g:copilot_filetypes = {
       \ 'javascriptreact': v:true,
       \ 'jsx': v:true,
       \ 'ruby': v:true,
+      \ 'python': v:true,
+      \ 'go': v:true,
+      \ 'rust': v:true,
       \ }
 
 imap <silent><script><expr> <C-L> copilot#Accept("\<CR>")
