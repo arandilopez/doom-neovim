@@ -1,6 +1,6 @@
 vim.cmd([[packadd packer.nvim]])
 
-local setup = function()
+local setup = function(use)
   -- Core functionality
   use("wbthomason/packer.nvim")
   use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
@@ -27,7 +27,10 @@ local setup = function()
   use("JoosepAlviste/nvim-ts-context-commentstring")
   use("tpope/vim-endwise")
   use("andymass/vim-matchup")
-  use("glepnir/dashboard-nvim")
+  use({
+    "glepnir/dashboard-nvim",
+    requires = { "nvim-tree/nvim-web-devicons" },
+  })
   use("windwp/nvim-autopairs")
   use("moll/vim-bbye")
   use("junegunn/goyo.vim")
@@ -64,7 +67,7 @@ local setup = function()
   use("tpope/vim-rhubarb")
   use({ "lewis6991/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" } })
 
-  -- Debuggine support
+  -- Debugging support
   use("mfussenegger/nvim-dap")
   use("rcarriga/nvim-dap-ui")
   use("theHamsta/nvim-dap-virtual-text")
@@ -75,6 +78,17 @@ local setup = function()
     "microsoft/vscode-js-debug",
     opt = true,
     run = "npm install --legacy-peer-deps && npm run compile",
+  })
+
+  -- Testing support
+  use({
+    "nvim-neotest/neotest",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "antoinemadec/FixCursorHold.nvim",
+      "haydenmeade/neotest-jest",
+    },
   })
 
   -- Colorscheme

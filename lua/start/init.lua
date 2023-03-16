@@ -1,25 +1,7 @@
-local db = require('dashboard')
+local db = require("dashboard")
 
-db.custom_center = {
-  {icon = '  ',
-  desc = 'Open last session                       ',
-  shortcut = 'SPC q l'},
-  {icon = '  ',
-  desc = 'Recently opened files                   ',
-  action =  'DashboardFindHistory',
-  shortcut = 'SPC f r'},
-  {icon = '  ',
-  desc = 'Find File                               ',
-  shortcut = 'SPC f f'},
-  {icon = '  ',
-  desc ='File Browser                            ',
-  shortcut = 'SPC o p'},
-  {icon = '  ',
-  desc = 'Find word                               ',
-  shortcut = 'SPC s p'},
-}
-
-db.custom_header = {
+local custom_header = {
+  [[]],
   [[=================     ===============     ===============   ========  ========]],
   [[\\ . . . . . . .\\   //. . . . . . .\\   //. . . . . . .\\  \\. . .\\// . . //]],
   [[\\ . . . . . . .\\   //. . . . . . .\\   //. . . . . . .\\  \\. . .\\// . . //]],
@@ -41,3 +23,22 @@ db.custom_header = {
   [[\   _-'                                                                `-_   /]],
   [[ `''                                                                      ``']],
 }
+
+db.setup({
+  theme = "doom",
+  config = {
+    center = {
+      { icon = "  ", desc = "Open last session                       ", keymap = "SPC q l" },
+      {
+        icon = "  ",
+        desc = "Recently opened files                   ",
+        action = "DashboardFindHistory",
+        keymap = "SPC f r",
+      },
+      { icon = "  ", desc = "Find File                               ", keymap = "SPC f f" },
+      { icon = "  ", desc = "File Browser                            ", keymap = "SPC o p" },
+      { icon = "  ", desc = "Find word                               ", keymap = "SPC s p" },
+    },
+    header = custom_header,
+  },
+})

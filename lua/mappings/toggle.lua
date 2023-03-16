@@ -1,6 +1,6 @@
 return {
   ["<Leader>"] = {
-    t = {
+    T = {
       name = "+Toggle",
       c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
       n = { "<cmd>set rnu!<cr>", "Relative numbering" },
