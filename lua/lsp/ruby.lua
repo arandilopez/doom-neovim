@@ -4,14 +4,12 @@ local utils = require("lspconfig/util")
 
 local function ruby_root_pattern(...)
   local patterns = { ".git", "Gemfile" }
-  local is_ruby = utils.root_pattern(unpack(patterns))(...)
-  return is_ruby
+  return utils.root_pattern(unpack(patterns))(...)
 end
 
 local function sorbet_root_pattern(...)
   local patterns = { "sorbet/config" }
-  local is_sorbet_project = utils.root_pattern(unpack(patterns))(...)
-  return is_sorbet_project
+  return utils.root_pattern(unpack(patterns))(...)
 end
 
 lsp.solargraph.setup({
@@ -31,7 +29,11 @@ lsp.solargraph.setup({
   on_attach = config.on_attach,
   capabilities = config.capabilities,
   root_dir = function(fname)
-    return ruby_root_pattern(fname) and not sorbet_root_pattern(fname)
+    local is_sorbet = sorbet_root_pattern(fname)
+    if is_sorbet then
+      return false
+    end
+    return ruby_root_pattern(fname)
   end,
 })
 
@@ -41,6 +43,6 @@ lsp.sorbet.setup({
   on_attach = config.on_attach,
   capabilities = config.capabilities,
   root_dir = function(fname)
-    return ruby_root_pattern(fname) and sorbet_root_pattern(fname)
+    return sorbet_root_pattern(fname)
   end,
 })
