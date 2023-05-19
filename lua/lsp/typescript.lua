@@ -1,6 +1,7 @@
-local config = require('lsp.config')
+local lspconfig = require("lspconfig")
+local config = require("lsp.config")
 
-require('lspconfig').tsserver.setup {
+lspconfig.tsserver.setup({
   on_attach = config.on_attach,
   capabilities = config.capabilities,
   filetypes = {
@@ -9,6 +10,8 @@ require('lspconfig').tsserver.setup {
     "typescript.tsx",
     "javascript",
     "javascriptreact",
-    "javascript.jsx"
-  }
-}
+    "javascript.jsx",
+  },
+})
+
+lspconfig.eslint.setup({})
