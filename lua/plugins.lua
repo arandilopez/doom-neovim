@@ -88,6 +88,7 @@ local setup = function(use)
       "nvim-treesitter/nvim-treesitter",
       "antoinemadec/FixCursorHold.nvim",
       "haydenmeade/neotest-jest",
+      "marilari88/neotest-vitest",
     },
   })
 

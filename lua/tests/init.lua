@@ -6,6 +6,7 @@ require("neotest").setup({
         return require("neotest-jest.util").find_package_json_ancestor(path)
       end,
     }),
+    require("neotest-vitest"),
   },
 })
 
