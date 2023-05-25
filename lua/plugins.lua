@@ -73,11 +73,11 @@ local setup = function(use)
   use("theHamsta/nvim-dap-virtual-text")
   use("nvim-telescope/telescope-dap.nvim")
   use("suketa/nvim-dap-ruby")
-  use("mxsdev/nvim-dap-vscode-js")
+  use({ "mxsdev/nvim-dap-vscode-js", module = { "dap-vscode-js" } })
   use({
     "microsoft/vscode-js-debug",
     opt = true,
-    run = "npm install --legacy-peer-deps && npm run compile",
+    run = "npm install && npx gulp vsDebugServerBundle && rm -rf out && mv dist out",
   })
 
   -- Testing support

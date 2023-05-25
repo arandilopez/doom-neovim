@@ -1,3 +1,4 @@
+local DEBUGGER_PATH = vim.fn.stdpath("data") .. "/site/pack/packer/opt/vscode-js-debug"
 local dap = require("dap")
 local dapui = require("dapui")
 
@@ -13,17 +14,43 @@ dap.listeners.before.event_exited["dapui_config"] = function()
   dapui.close()
 end
 
-require("nvim-dap-virtual-text").setup()
+require("nvim-dap-virtual-text").setup({})
+
+-- Load launch.js files
+require("dap.ext.vscode").load_launchjs(nil, {})
 
 -- Language support for dap
-
 require("dap-ruby").setup()
 require("dap-vscode-js").setup({
-  adapters = { "pwa-node" },
+  node_path = "node",
+  debugger_path = DEBUGGER_PATH,
+  adapters = { "pwa-node", "pwa-chrome" },
 })
 
-for _, language in ipairs({ "typescript", "javascript" }) do
-  require("dap").configurations[language] = {
+for _, filetype in ipairs({ "typescriptreact", "tsx", "javascriptreact", "jsx" }) do
+  require("dap").configurations[filetype] = {
+    {
+      type = "pwa-chrome",
+      name = "Attach to Chrome",
+      request = "attach",
+      program = "${file}",
+      cwd = vim.fn.getcwd(),
+      sourceMaps = true,
+      protocol = "inspector",
+      port = 9222,
+      webRoot = "${workspaceFolder}",
+    },
+    {
+      type = "pwa-chrome",
+      name = "Launch Chrome",
+      request = "launch",
+      url = "http://localhost:3000",
+    },
+  }
+end
+
+for _, filetype in ipairs({ "typescript", "javascript" }) do
+  require("dap").configurations[filetype] = {
     {
       type = "pwa-node",
       request = "attach",
