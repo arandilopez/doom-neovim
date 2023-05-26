@@ -1,6 +1,6 @@
 local M = {}
 -- Generic on_attach callback
-M.on_attach = function(client, bufnr)
+M.on_attach = function(_, bufnr)
   local function buf_set_option(...)
     vim.api.nvim_buf_set_option(bufnr, ...)
   end

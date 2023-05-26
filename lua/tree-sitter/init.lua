@@ -11,6 +11,8 @@ require("nvim-treesitter.configs").setup({
     "graphql",
     "elixir",
     "python",
+    "markdown",
+    "markdown_inline",
   },
   highlight = {
     enable = true,

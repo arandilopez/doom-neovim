@@ -3,6 +3,13 @@ vim.cmd([[packadd packer.nvim]])
 local setup = function(use)
   -- Core functionality
   use("wbthomason/packer.nvim")
+  use({
+    "williamboman/mason.nvim",
+    run = ":MasonUpdate", -- :MasonUpdate updates registry contents
+    config = function()
+      require("mason").setup()
+    end,
+  })
   use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
   use("windwp/nvim-ts-autotag")
   use({
@@ -57,6 +64,27 @@ local setup = function(use)
   use("f3fora/cmp-spell")
   use("mhartington/formatter.nvim")
   use("onsails/lspkind.nvim")
+  use({
+    "glepnir/lspsaga.nvim",
+    opt = true,
+    branch = "main",
+    event = "LspAttach",
+    config = function()
+      require("lspsaga").setup({
+        lightbulb = {
+          enable = true,
+          enable_in_insert = true,
+          sign = true,
+          sign_priority = 40,
+          virtual_text = true,
+        },
+      })
+    end,
+    requires = {
+      { "nvim-tree/nvim-web-devicons" },
+      { "nvim-treesitter/nvim-treesitter" },
+    },
+  })
 
   -- Language Support
   use("TovarishFin/vim-solidity")
@@ -73,7 +101,7 @@ local setup = function(use)
   use("theHamsta/nvim-dap-virtual-text")
   use("nvim-telescope/telescope-dap.nvim")
   use("suketa/nvim-dap-ruby")
-  use({ "mxsdev/nvim-dap-vscode-js", module = { "dap-vscode-js" } })
+  use("mxsdev/nvim-dap-vscode-js")
   use({
     "microsoft/vscode-js-debug",
     opt = true,

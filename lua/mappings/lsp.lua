@@ -1,12 +1,12 @@
 return {
   ["<Leader>"] = {
     c = {
-      a = { "<cmd>LspCodeAction<cr>", "Code action" },
+      a = { "<cmd>Lspsaga code_action<cr>", "Code action" },
       f = { "<cmd>FormatWrite<cr>", "Code Formatting" },
-      r = { "<cmd>LspRename<cr>", "Rename" },
+      r = { "<cmd>Lspsaga rename<cr>", "Rename" },
       R = { "<cmd>LspReferences<cr>", "Got to references" },
-      d = { "<cmd>LspDiagnostic<cr>", "Code diagnostics" },
-    }
+      d = { "<cmd>Lspsaga show_line_diagnostic<cr>", "Code diagnostics" },
+    },
   },
 
   g = {
@@ -16,5 +16,5 @@ return {
     R = { "<cmd>LspReferences<cr>", "Go to references" },
   },
 
-  K = { "<cmd>LspHover<cr>", "Show help/docs" },
+  K = { "<cmd>Lspsaga hover_doc<cr>", "Show help/docs" },
 }

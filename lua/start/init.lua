@@ -30,7 +30,7 @@ db.setup({
     center = {
       { icon = "  ", desc = "Open last session                       ", keymap = "SPC q l" },
       {
-        icon = "  ",
+        icon = "  ",
         desc = "Recently opened files                   ",
         action = "DashboardFindHistory",
         keymap = "SPC f r",
