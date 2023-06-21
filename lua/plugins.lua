@@ -11,6 +11,7 @@ local setup = function(use)
     end,
   })
   use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+  use("nvim-treesitter/playground")
   use("windwp/nvim-ts-autotag")
   use({
     "nvim-telescope/telescope.nvim",
