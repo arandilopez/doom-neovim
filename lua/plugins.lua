@@ -77,7 +77,7 @@ local setup = function(use)
           enable_in_insert = true,
           sign = true,
           sign_priority = 40,
-          virtual_text = true,
+          virtual_text = false,
         },
       })
     end,
