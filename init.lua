@@ -22,3 +22,6 @@ require("statusline")
 require("transparency")
 require("tree-sitter")
 require("tests")
+
+-- Language specific
+require("langs")
