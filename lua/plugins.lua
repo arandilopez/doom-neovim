@@ -66,10 +66,8 @@ local setup = function(use)
   use("mhartington/formatter.nvim")
   use("onsails/lspkind.nvim")
   use({
-    "glepnir/lspsaga.nvim",
-    opt = true,
-    branch = "main",
-    event = "LspAttach",
+    "nvimdev/lspsaga.nvim",
+    after = "nvim-lspconfig",
     config = function()
       require("lspsaga").setup({
         lightbulb = {
@@ -81,10 +79,6 @@ local setup = function(use)
         },
       })
     end,
-    requires = {
-      { "nvim-tree/nvim-web-devicons" },
-      { "nvim-treesitter/nvim-treesitter" },
-    },
   })
 
   -- Language Support
