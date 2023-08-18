@@ -1,3 +1,4 @@
+-- Define filetypes for various file extensions, filenames and patterns
 vim.filetype.add({
   -- Detect and assign filetype based on the extension of the filename
   extension = {
@@ -19,4 +20,5 @@ vim.filetype.add({
   },
 })
 
+-- Treesitter language support
 vim.treesitter.language.register("markdown", "mdx")
