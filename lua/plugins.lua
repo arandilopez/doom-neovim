@@ -71,10 +71,7 @@ local setup = function(use)
     config = function()
       require("lspsaga").setup({
         lightbulb = {
-          enable = true,
-          enable_in_insert = true,
-          sign = true,
-          sign_priority = 40,
+          enable = false,
           virtual_text = false,
         },
       })
