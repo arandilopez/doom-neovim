@@ -6,7 +6,7 @@ require("lspconfig").prismals.setup({
   on_attach = function(client, buffer)
     config.on_attach(client, buffer)
     -- Handle formatting for prisma files with LSP
-    vim.cmd("command! LspFormat lua vim.lsp.buf.formatting_sync()")
+    vim.cmd("command! LspFormat lua vim.lsp.buf.format()")
     vim.cmd([[
       augroup LspFormatAutogroup
         autocmd!
