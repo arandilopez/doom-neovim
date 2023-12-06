@@ -5,7 +5,8 @@ autocmd!
 filetype plugin indent on
 syntax enable
 set termguicolors
-colorscheme onedark
+" colorscheme onedark
+colorscheme dracula
 ]])
 
 set.compatible = false

@@ -16,7 +16,7 @@ require("formatter").setup({
     },
 
     ruby = {
-      require("formatting.filetypes.ruby").rubocop,
+      require("formatter.filetypes.ruby").rubocop,
     },
 
     rust = {

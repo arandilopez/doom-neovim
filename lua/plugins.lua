@@ -81,6 +81,7 @@ local setup = function(use)
   -- Language Support
   use("TovarishFin/vim-solidity")
   use("watzon/vim-edge-template")
+  use("amadeus/vim-mjml")
 
   -- VCS plugins
   use("tpope/vim-fugitive")
