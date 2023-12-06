@@ -45,6 +45,13 @@ require("telescope").setup({
       sort_lastused = true,
       sort_mru = true,
     },
+    git_branches = {
+      mappings = {
+        i = {
+          ["<C-n>"] = require("telescope.actions").git_create_branch,
+        },
+      },
+    },
   },
   extensions = {
     project = {
