@@ -9,6 +9,7 @@ return {
       s = { "<cmd>Telescope git_status<cr>", "Files in git status" },
       p = { "<cmd>Git push<cr>", "Git push" },
       l = { "<cmd>Git pull --rebase<cr>", "Git pull" },
+      S = { "<cmd>Telescope git_stash<cr>", "Show git stash" },
     },
   },
 }
