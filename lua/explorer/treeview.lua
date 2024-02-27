@@ -1,7 +1,7 @@
 -- require('nvim-tree').setup()
 require("nvim-tree").setup({
-  disable_netrw = true,
-  hijack_netrw = true,
+  disable_netrw = false,
+  hijack_netrw = false,
   open_on_tab = false,
   hijack_cursor = false,
   update_cwd = false,
