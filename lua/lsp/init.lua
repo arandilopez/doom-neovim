@@ -22,8 +22,8 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagn
     spacing = 4,
     prefix = "",
   },
+  update_on_insert = true,
 })
-
 -- Change diagnostic symbols in the sign column (gutter)
 local signs = { Error = " ", Warning = " ", Hint = " ", Information = " " }
 for type, icon in pairs(signs) do

@@ -16,6 +16,9 @@ require("nvim-treesitter.configs").setup({
     "sql",
     "query",
   },
+  sync_install = false,
+  auto_install = true,
+  ignore_install = {},
   highlight = {
     enable = true,
   },
