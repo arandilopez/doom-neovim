@@ -89,8 +89,7 @@ local setup = function(use)
   use({ "lewis6991/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" } })
 
   -- Debugging support
-  use("mfussenegger/nvim-dap")
-  use("rcarriga/nvim-dap-ui")
+  use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } })
   use("theHamsta/nvim-dap-virtual-text")
   use("nvim-telescope/telescope-dap.nvim")
   use("suketa/nvim-dap-ruby")
