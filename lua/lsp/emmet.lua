@@ -1,9 +1,10 @@
-local lspconfig = require("lspconfig")
+local lsp = require("lspconfig")
 local config = require("lsp.config")
 local capabilities = config.capabilities
+
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-lspconfig.emmet_ls.setup({
+lsp.emmet_ls.setup({
   on_attach = config.on_attach,
   capabilities = capabilities,
   filetypes = {
