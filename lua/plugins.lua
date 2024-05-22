@@ -48,6 +48,7 @@ local setup = function(use)
   use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" })
   use("xiyaowong/nvim-transparent")
   use("norcalli/nvim-colorizer.lua")
+  use("jessarcher/vim-heritage")
 
   -- Mappings
   use("folke/which-key.nvim")
