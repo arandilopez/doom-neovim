@@ -7,7 +7,7 @@ local function sorbet_root_pattern(...)
   return utils.root_pattern(unpack(patterns))(...)
 end
 
-lsp.ruby_ls.setup({
+lsp.ruby_lsp.setup({
   on_attach = config.on_attach,
   capabilities = config.capabilities,
 })
