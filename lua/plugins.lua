@@ -34,7 +34,13 @@ local setup = function(use)
   use("suy/vim-context-commentstring")
   use("JoosepAlviste/nvim-ts-context-commentstring")
   use("tpope/vim-endwise")
-  use("andymass/vim-matchup")
+  use({
+    "andymass/vim-matchup",
+    setup = function()
+      -- may set any options here
+      vim.g.matchup_matchparen_offscreen = { method = "popup" }
+    end,
+  })
   use({
     "glepnir/dashboard-nvim",
     requires = { "nvim-tree/nvim-web-devicons" },
@@ -114,7 +120,7 @@ local setup = function(use)
   })
 
   -- Colorscheme
-  use("navarasu/onedark.nvim")
+  -- use("navarasu/onedark.nvim")
   use("dracula/vim")
 
   -- Extras
