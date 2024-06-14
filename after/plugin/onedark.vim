@@ -1,1 +1,1 @@
-highlight CopilotSuggestion guifg=#555555 ctermfg=8
+" highlight CopilotSuggestion guifg=#555555 ctermfg=8
