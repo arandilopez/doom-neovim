@@ -8,9 +8,6 @@ require("gitsigns").setup({
     virt_text_priority = 100,
     ignore_whitespace = true,
   },
-  current_line_blame_formatter_opts = {
-    relative_time = true,
-  },
 })
 
 -- Fixes git blame comments with Dracula theme

@@ -10,6 +10,12 @@ local setup = function(use)
       require("mason").setup()
     end,
   })
+  use({
+    "williamboman/mason-lspconfig.nvim",
+    config = function()
+      require("mason-lspconfig").setup()
+    end,
+  })
   use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
   use("nvim-treesitter/playground")
   use("windwp/nvim-ts-autotag")
@@ -84,11 +90,16 @@ local setup = function(use)
       })
     end,
   })
+  use("nvimtools/none-ls.nvim")
+  use("/davidmh/cspell.nvim")
 
   -- Language Support
   use("TovarishFin/vim-solidity")
   use("watzon/vim-edge-template")
   use("amadeus/vim-mjml")
+  use({
+    "lervag/vimtex",
+  })
 
   -- VCS plugins
   use("tpope/vim-fugitive")

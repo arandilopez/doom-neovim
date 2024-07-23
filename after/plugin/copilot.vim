@@ -13,6 +13,8 @@ let g:copilot_filetypes = {
       \ 'go': v:true,
       \ 'rust': v:true,
       \ 'elixir': v:true,
+      \ 'tex': v:true,
+      \ 'bib': v:true,
       \ }
 
 let g:copilot_workspace_folders =

@@ -23,9 +23,9 @@ end
 M.capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 -- Capabilities for auto folding
-M.capabilities.textDocument.foldingRange = {
-  dynamicRegistration = false,
-  lineFoldingOnly = true,
-}
+-- M.capabilities.textDocument.foldingRange = {
+--   dynamicRegistration = false,
+--   lineFoldingOnly = true,
+-- }
 
 return M
