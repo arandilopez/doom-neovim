@@ -2,7 +2,7 @@ local lspconfig = require("lspconfig")
 local utils = require("lspconfig.util")
 local config = require("lsp.config")
 
-lspconfig.tsserver.setup({
+lspconfig.ts_ls.setup({
   on_attach = config.on_attach,
   capabilities = config.capabilities,
   filetypes = {
