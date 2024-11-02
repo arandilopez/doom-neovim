@@ -53,6 +53,11 @@ set.clipboard = "unnamedplus"
 set.shell = "zsh"
 set.exrc = true
 set.inccommand = "split"
+
+-- Set leader key to space
+vim.cmd([[
+  let g:mapleader = " "
+]])
 -- Remove trailing whitespace on save
 vim.cmd("autocmd BufWritePre * :%s/\\s\\+$//e")
 

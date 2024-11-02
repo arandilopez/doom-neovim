@@ -1,12 +1,8 @@
 return {
-  ["<Leader>"] = {
-    t = {
-      name = "+Test",
-      t = { "<cmd>NeotestNearest<cr>", "Run single test" },
-      f = { "<cmd>NeotestFile<cr>", "Run this file" },
-      A = { "<cmd>Neotest<cr>", "Run all tests" },
-      s = { "<cmd>NeotestSummary<cr>", "Toogle summary" },
-      o = { "<cmd>NeotestOutput<cr>", "Toogle output" },
-    },
-  },
+  { "<leader>t", group = "Test" },
+  { "<leader>tt", "<cmd>NeotestNearest<cr>", desc = "Run single test" },
+  { "<leader>tf", "<cmd>NeotestFile<cr>", desc = "Run this file" },
+  { "<leader>tA", "<cmd>Neotest<cr>", desc = "Run all tests" },
+  { "<leader>ts", "<cmd>NeotestSummary<cr>", desc = "Toogle summary" },
+  { "<leader>to", "<cmd>NeotestOutput<cr>", desc = "Toogle output" },
 }

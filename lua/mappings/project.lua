@@ -1,9 +1,4 @@
-
 return {
-  ["<Leader>"] = {
-    p = {
-      name = "+Project",
-      p = {":lua require'telescope'.extensions.project.project{}<CR>", "Open project"}
-    }
-  }
+  { "<leader>p", group = "Project" },
+  { "<leader>pp", "<cmd>lua require'telescope'.extensions.project.project{}<CR>", desc = "Open project" },
 }

@@ -1,21 +1,18 @@
 return {
-  ["<Leader>"] = {
-    w = {
-      name = "+Window",
-      h = { "<C-W><C-H>", "Move focus to left window" },
-      j = { "<C-W><C-J>", "Move focus to above window" },
-      k = { "<C-W><C-K>", "Move focus to below window" },
-      l = { "<C-W><C-L>", "Move focus to right window" },
-    },
-  },
-  s = {
-    name = "+Split",
-    s = { "<C-W>s", "Split window horizontally" },
-    v = { "<C-W>v", "Split window vertically" },
+  { "<leader>w", group = "Window" },
+  { "<leader>ws", "<cmd>split<cr>", desc = "Split window horizontally" },
+  { "<leader>wv", "<cmd>vsplit<cr>", desc = "Split window vertically" },
 
-    h = { "<C-W>H", "Move window to far left" },
-    j = { "<C-W>J", "Move window to far bottom" },
-    k = { "<C-W>K", "Move window to far top" },
-    l = { "<C-W>L", "Move window to far right" },
-  },
+  { "<leader>wh", "<cmd>wincmd H<cr>", desc = "Move window to far left" },
+  { "<leader>wj", "<cmd>wincmd J<cr>", desc = "Move window to far bottom" },
+  { "<leader>wk", "<cmd>wincmd K<cr>", desc = "Move window to far top" },
+  { "<leader>wl", "<cmd>wincmd L<cr>", desc = "Move window to far right" },
+
+  { "ss", "<cmd>split<cr>", desc = "Split window horizontally" },
+  { "sv", "<cmd>vsplit<cr>", desc = "Split window vertically" },
+
+  { "sh", "<cmd>wincmd H<cr>", desc = "Move window to far left" },
+  { "sj", "<cmd>wincmd J<cr>", desc = "Move window to far bottom" },
+  { "sk", "<cmd>wincmd K<cr>", desc = "Move window to far top" },
+  { "sl", "<cmd>wincmd L<cr>", desc = "Move window to far right" },
 }

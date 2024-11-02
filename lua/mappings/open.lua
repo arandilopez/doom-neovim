@@ -1,8 +1,4 @@
 return {
-  ["<Leader>"] = {
-    o = {
-      name = "+Open",
-      p = {"<cmd>NvimTreeToggle<cr>", "Open folder tree view"}
-    },
-  }
+  { "<leader>o", group = "Open" },
+  { "<leader>op", "<cmd>NvimTreeToggle<cr>", desc = "Open folder tree view" },
 }

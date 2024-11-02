@@ -1,11 +1,7 @@
 return {
-  ["<Leader>"] = {
-    T = {
-      name = "+Toggle",
-      c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
-      n = { "<cmd>set rnu!<cr>", "Relative numbering" },
-      t = { "<cmd>Lspsaga term_toggle<cr>", "Terminal" },
-      z = { "<cmd>Goyo<cr>", "Zen mode" },
-    },
-  },
+  { "<leader>T", group = "Toggle" },
+  { "<leader>Tc", "<cmd>Telescope colorscheme<cr>", desc = "Colorscheme" },
+  { "<leader>Tn", "<cmd>set rnu!<cr>", desc = "Relative numbering" },
+  { "<leader>Tt", "<cmd>Lspsaga term_toggle<cr>", desc = "Terminal" },
+  { "<leader>Tz", "<cmd>Goyo<cr>", desc = "Zen mode" },
 }

@@ -1,8 +1,4 @@
 return {
-  ["<Leader>"] = {
-    s = {
-      name = "+Search",
-      p = { "<cmd>Telescope live_grep<cr>", "Search in project" },
-    },
-  }
+  { "<leader>s", group = "Search" },
+  { "<leader>sp", "<cmd>Telescope live_grep<cr>", desc = "Search in project" },
 }

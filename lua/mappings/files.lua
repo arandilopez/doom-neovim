@@ -1,14 +1,10 @@
 return {
-  ["<Leader>"] = {
-    f = {
-      name = "+Files",
-      b = { "<cmd>Telescope marks<cr>", "Boorkmarks" },
-      f = { "<cmd>Telescope find_files<cr>", "Find Files" },
-      n = { "<cmd>DashboardNewFile<cr>", "New file" },
-      p = { "<cmd>tabe ~/.config/nvim/init.lua<cr>", "Open configuration file" },
-      r = { "<cmd>Telescope oldfiles<cr>", "Recent opened files" },
-      y = { "<cmd>let @+ = expand(\"%:t\")<cr>", "Yank filename" },
-      Y = { "<cmd>let @+ = expand(\"%\")<cr>", "Yank relative file path" },
-    },
-  }
+  { "<leader>f", group = "Files" },
+  { "<leader>fb", "<cmd>Telescope marks<cr>", desc = "Boorkmarks" },
+  { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
+  { "<leader>fn", "<cmd>DashboardNewFile<cr>", desc = "New file" },
+  { "<leader>fp", "<cmd>tabe ~/.config/nvim/init.lua<cr>", desc = "Open configuration file" },
+  { "<leader>fr", "<cmd>Telescope oldfiles<cr>", desc = "Recent opened files" },
+  { "<leader>fy", '<cmd>let @+ = expand("%:t")<cr>', desc = "Yank filename" },
+  { "<leader>fY", '<cmd>let @+ = expand("%")<cr>', desc = "Yank relative file path" },
 }

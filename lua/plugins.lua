@@ -63,7 +63,7 @@ local setup = function(use)
   use("jessarcher/vim-heritage")
 
   -- Mappings
-  use("folke/which-key.nvim")
+  use({ "folke/which-key.nvim", requires = "kyazdani42/nvim-web-devicons" })
 
   -- LSP and formatting
   use("neovim/nvim-lspconfig")
@@ -91,7 +91,7 @@ local setup = function(use)
     end,
   })
   use("nvimtools/none-ls.nvim")
-  use("/davidmh/cspell.nvim")
+  -- use("/davidmh/cspell.nvim")
 
   -- Language Support
   use("TovarishFin/vim-solidity")

@@ -1,12 +1,8 @@
 return {
-  ["<Leader>"] = {
-    b = {
-      name = "+Buffers",
-      b = { "<cmd>Telescope buffers<cr>", "Browse buffers" },
-      d = { "<cmd>Bwipeout<cr>", "Remove buffer" },
-      K = { "<cmd>bufdo :Bwipeout<cr><cmd>Dashboard<cr>", "Remove all buffers" },
-      n = { "<cmd>bnext<cr>", "Next buffer" },
-      p = { "<cmd>bprev<cr>", "Previous buffer" },
-    },
-  }
+  { "<leader>b", group = "Buffers" },
+  { "<leader>bb", "<cmd>Telescope buffers<cr>", desc = "Browse buffers" },
+  { "<leader>bd", "<cmd>Bwipeout<cr>", desc = "Remove buffer" },
+  { "<leader>bK", "<cmd>bufdo :Bwipeout<cr><cmd>Dashboard<cr>", desc = "Remove all buffers" },
+  { "<leader>bn", "<cmd>bnext<cr>", desc = "Next buffer" },
+  { "<leader>bp", "<cmd>bprev<cr>", desc = "Previous buffer" },
 }
