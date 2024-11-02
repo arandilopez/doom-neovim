@@ -15,10 +15,12 @@ let g:copilot_filetypes = {
       \ 'elixir': v:true,
       \ 'tex': v:true,
       \ 'bib': v:true,
+      \ 'html': v:true,
+      \ 'css': v:true,
+      \ 'Dockerfile': v:true,
+      \ 'markdown': v:true,
+      \ 'yaml': v:true
       \ }
-
-let g:copilot_workspace_folders =
-      \ ["~/Code/rxv-api-ruby", "~/Code/rxv-frontend"]
 
 imap <silent><script><expr> <C-L> copilot#Accept("\<CR>")
 let g:copilot_no_tab_map = v:true
