@@ -15,7 +15,7 @@ lspconfig.ts_ls.setup({
   },
 })
 
-lspconfig.eslint.setup({})
+-- lspconfig.eslint.setup({})
 
 lspconfig.biome.setup({})
 

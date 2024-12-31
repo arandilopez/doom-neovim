@@ -10,6 +10,7 @@ end
 lsp.ruby_lsp.setup({
   on_attach = config.on_attach,
   capabilities = config.capabilities,
+  formatter = "none",
 })
 
 lsp.sorbet.setup({
