@@ -134,8 +134,32 @@ local setup = function(use)
   -- use("navarasu/onedark.nvim")
   use("dracula/vim")
 
-  -- Extras
+  -- AI
   use("github/copilot.vim")
+  use({
+    "olimorris/codecompanion.nvim",
+    config = function()
+      require("codecompanion").setup({
+        strategies = {
+          chat = {
+            adapter = "copilot",
+          },
+          inline = {
+            adapter = "copilot",
+          },
+        },
+        opts = {
+          log_level = "DEBUG",
+          language = "English",
+        },
+      })
+    end,
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    },
+  })
+  -- Extras
   use("wakatime/vim-wakatime")
   use({
     "iamcco/markdown-preview.nvim",
