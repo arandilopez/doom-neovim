@@ -1,22 +1,39 @@
+local biome_or_prettier = function()
+  local cwd = vim.fn.getcwd()
+  if vim.fn.filereadable(cwd .. "biome.json") == 1 then
+    return require("formatter.filetypes.javascript").biome()
+  else
+    return require("formatter.filetypes.javascript").prettier()
+  end
+end
+
 -- Provides the Format and FormatWrite commands
 require("formatter").setup({
   -- All formatter configurations are opt-in
   filetype = {
     javascript = {
-      require("formatter.filetypes.javascript").prettier,
+      function()
+        return biome_or_prettier()
+      end,
     },
     javascriptreact = {
-      require("formatter.filetypes.javascriptreact").prettier,
+      function()
+        return biome_or_prettier()
+      end,
     },
     typescript = {
-      require("formatter.filetypes.typescript").prettier,
+      function()
+        return biome_or_prettier()
+      end,
     },
     typescriptreact = {
-      require("formatter.filetypes.typescriptreact").prettier,
+      function()
+        return biome_or_prettier()
+      end,
     },
 
     ruby = {
-      -- require("formatter.filetypes.ruby").rubocop,
+      require("formatter.filetypes.ruby").rubocop,
     },
 
     rust = {
