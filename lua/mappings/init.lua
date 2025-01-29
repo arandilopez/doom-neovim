@@ -12,6 +12,7 @@ local toggle = require("mappings.toggle")
 local search = require("mappings.search")
 local session = require("mappings.session")
 local window = require("mappings.window")
+local copilot = require("mappings.copilot")
 
 -- Normal mode mappings
 
@@ -35,6 +36,7 @@ wk.add(toggle)
 wk.add(search)
 wk.add(session)
 wk.add(window)
+wk.add(copilot)
 
 -- Insert mode mappings
 wk.add({ { "<C-Space>", "<cmd>LspSignatureHelp<cr>", desc = "Signature Help" }, mode = { "i" } })

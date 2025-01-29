@@ -152,7 +152,13 @@ local setup = function(use)
           log_level = "DEBUG",
           language = "English",
         },
+        display = {
+          action_palette = {
+            provider = "telescope",
+          },
+        },
       })
+      vim.cmd([[cab cc CodeCompanion]])
     end,
     requires = {
       "nvim-lua/plenary.nvim",
