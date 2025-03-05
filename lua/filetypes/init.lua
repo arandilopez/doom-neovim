@@ -22,3 +22,8 @@ vim.filetype.add({
 
 -- Treesitter language support
 vim.treesitter.language.register("markdown", "mdx")
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "eruby",
+  command = "setlocal commentstring=<%# %s %>",
+})
