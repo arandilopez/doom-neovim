@@ -121,6 +121,12 @@ local setup = function(use)
   use("tpope/vim-fugitive")
   use("tpope/vim-rhubarb")
   use({ "lewis6991/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" } })
+  use({
+    "echasnovski/mini.diff",
+    config = function()
+      require("mini.diff").setup()
+    end,
+  })
 
   -- Debugging support
   use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } })
@@ -154,28 +160,6 @@ local setup = function(use)
   use("github/copilot.vim")
   use({
     "olimorris/codecompanion.nvim",
-    config = function()
-      require("codecompanion").setup({
-        strategies = {
-          chat = {
-            adapter = "copilot",
-          },
-          inline = {
-            adapter = "copilot",
-          },
-        },
-        opts = {
-          log_level = "DEBUG",
-          language = "English",
-        },
-        display = {
-          action_palette = {
-            provider = "telescope",
-          },
-        },
-      })
-      vim.cmd([[cab cc CodeCompanion]])
-    end,
     requires = {
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",

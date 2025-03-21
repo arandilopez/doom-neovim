@@ -6,6 +6,7 @@ require("core")
 
 -- Editor features
 require("autopairs")
+require("companion")
 require("colorschemes")
 require("completion")
 require("debugging")

@@ -34,6 +34,7 @@ cmp.setup({
     { name = "nvim_lsp" },
     { name = "vsnip" }, -- For vsnip users.
     { name = "spell" },
+    { name = "codecompanion" },
   }, {
     { name = "buffer" },
   }),
