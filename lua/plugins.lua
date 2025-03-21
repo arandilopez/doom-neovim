@@ -109,7 +109,6 @@ local setup = function(use)
   use({
     "R-nvim/cmp-r",
     {
-      "hrsh7th/nvim-cmp",
       config = function()
         require("cmp").setup({ sources = { { name = "cmp_r" } } })
         require("cmp_r").setup({})
@@ -184,6 +183,12 @@ local setup = function(use)
         timers_to_long_break = 4,
       })
     end,
+  })
+  use({
+    "nvzone/typr",
+    requires = "nvzone/volt",
+    -- opts = {},
+    -- cmd = { "Typr", "TyprStats" },
   })
 end
 
