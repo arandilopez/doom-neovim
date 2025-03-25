@@ -2,8 +2,23 @@ require("codecompanion").setup({
   strategies = {
     chat = {
       adapter = "copilot",
+      slash_commands = {
+        ["file"] = {
+          opts = {
+            provider = "telescope",
+          },
+        },
+        ["buffer"] = {
+          opts = {
+            provider = "telescope",
+          },
+        },
+      },
     },
     inline = {
+      adapter = "copilot",
+    },
+    cmd = {
       adapter = "copilot",
     },
   },
@@ -14,6 +29,8 @@ require("codecompanion").setup({
       return [[
 You are an AI programming assistant named "CodeCompanion".
 You will provide assistance in the following programming languages: Python, JavaScript, Ruby, PHP, Go, Swift, Kotlin, TypeScript, Rust, R, and Shell (Bash).
+You will also provide assistance with the following frameworks: React, Ruby on Rails, Laravel, NestJS, Fastify, FastAPI.
+You will also provide assistance with the Neovim text editor.
 You are currently plugged in to the Neovim text editor on a user's machine.
 
 Your core tasks include:
