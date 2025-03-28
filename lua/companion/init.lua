@@ -1,7 +1,40 @@
 require("codecompanion").setup({
+  adapters = {
+    anthropic = function()
+      return require("codecompanion.adapters").extend("anthropic", {
+        env = {
+          api_key = "cmd:op read op://Private/Anthropic/password --no-newline",
+        },
+        schema = {
+          model = {
+            default = "claude-3-5-sonnet-latest",
+          },
+        },
+      })
+    end,
+    openai = function()
+      return require("codecompanion.adapters").extend("openai", {
+        env = {
+          api_key = "cmd:op read op://Private/CodeCompanion/password --no-newline",
+        },
+        schema = {
+          model = {
+            default = "gpt-4",
+          },
+        },
+      })
+    end,
+    gemini = function()
+      return require("codecompanion.adapters").extend("gemini", {
+        env = {
+          api_key = "cmd:op read op://Private/Gemini/password --no-newline",
+        },
+      })
+    end,
+  },
   strategies = {
     chat = {
-      adapter = "copilot",
+      adapter = "gemini",
       slash_commands = {
         ["file"] = {
           opts = {
@@ -16,10 +49,10 @@ require("codecompanion").setup({
       },
     },
     inline = {
-      adapter = "copilot",
+      adapter = "gemini",
     },
     cmd = {
-      adapter = "copilot",
+      adapter = "gemini",
     },
   },
   opts = {
